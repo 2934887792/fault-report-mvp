@@ -1,0 +1,1130 @@
+{
+  "01": [
+    {
+      "code": "E5-01-01",
+      "name": "RESEARCH STAFF/ STUDENT ROOM"
+    },
+    {
+      "code": "E5-01-02",
+      "name": "RESEARCH COMPUTING LAB (VACANT)"
+    },
+    {
+      "code": "E5-01-03",
+      "name": "OFFICE CIRCULATION"
+    },
+    {
+      "code": "E5-01-03A",
+      "name": "SERVER ROOM"
+    },
+    {
+      "code": "E5-01-03B",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-01-04",
+      "name": "COLD ROOM"
+    },
+    {
+      "code": "E5-01-05",
+      "name": "LIQUID NITROGEN ROOM"
+    },
+    {
+      "code": "E5-01-07",
+      "name": "INTERNAL CIRCULATION"
+    },
+    {
+      "code": "E5-01-08",
+      "name": "FLAMMABLE LIQUID STORE"
+    },
+    {
+      "code": "E5-01-09",
+      "name": "SECURITY ROOM"
+    },
+    {
+      "code": "E5-01-09A",
+      "name": "BCP ROOM"
+    },
+    {
+      "code": "E5-01-10*",
+      "name": "SITE EM OFFICE B"
+    },
+    {
+      "code": "E5-01-AHU1",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-01-AHU2",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-01-COMPRES1",
+      "name": "AIR COMPRESSOR ROOM"
+    },
+    {
+      "code": "E5-01-CWPR1",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-CWPR2",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-CWPR3",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-CWPR4",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-CWPR5",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-CWPR6",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-01-ELECT",
+      "name": "ELECTRICAL ROOM"
+    },
+    {
+      "code": "E5-01-ELECTR1",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-01-EXTCOR1",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-01-EXTCOR2",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-01-FCC",
+      "name": "FIRE COMMAND CENTRE"
+    },
+    {
+      "code": "E5-01-GAS2",
+      "name": "GAS 2"
+    },
+    {
+      "code": "E5-01-GAS3",
+      "name": "GAS CYLINDER ROOM"
+    },
+    {
+      "code": "E5-01-LIFTLOB",
+      "name": "LIFT LOBBY"
+    },
+    {
+      "code": "E5-01-MALE",
+      "name": "MALE TOILET"
+    },
+    {
+      "code": "E5-01-OSS1",
+      "name": "OPEN SHELTERED SPACE"
+    },
+    {
+      "code": "E5-01-OSS2",
+      "name": "OPEN SHELTERED SPACE"
+    },
+    {
+      "code": "E5-01-OSS3",
+      "name": "OPEN SHELTERED SPACE"
+    },
+    {
+      "code": "E5-01-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-01-STAIR2",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-01-STAIR3",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-01-STAIR4",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-01-STAIR5",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-01-STORE1",
+      "name": "STORE"
+    },
+    {
+      "code": "E5-01-STORE2",
+      "name": "STORE"
+    },
+    {
+      "code": "E5-01-TELR1",
+      "name": "TELECOMM RISER"
+    },
+    {
+      "code": "E5-01-TELR2",
+      "name": "TELECOMM RISER"
+    }
+  ],
+  "02": [
+    {
+      "code": "E5-02-01",
+      "name": "PROFESSIONAL OFFICERS"
+    },
+    {
+      "code": "E5-02-02",
+      "name": "UTILITY / STORE ROOM"
+    },
+    {
+      "code": "E5-02-03",
+      "name": "STUDENT DISCUSSION ROOM I/EXAM PROCESSING ROOM"
+    },
+    {
+      "code": "E5-02-04",
+      "name": "STUDENT DISCUSSION ROOM II"
+    },
+    {
+      "code": "E5-02-05",
+      "name": "SERVER ROOM"
+    },
+    {
+      "code": "E5-02-06",
+      "name": "CHBE CONFERENCE ROOM"
+    },
+    {
+      "code": "E5-02-07",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-08",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-09",
+      "name": "GENERAL OFFICE (DEPT OF CHEMICAL & BIOMOLECULAR ENGINEERING"
+    },
+    {
+      "code": "E5-02-10",
+      "name": "OFFICE CIRCULATION"
+    },
+    {
+      "code": "E5-02-10A",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-02-10B",
+      "name": "COMMITTEE WORKING ROOM"
+    },
+    {
+      "code": "E5-02-10C",
+      "name": "PANTRY"
+    },
+    {
+      "code": "E5-02-10D",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-02-10E",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-02-11",
+      "name": "ChBE OFFICE"
+    },
+    {
+      "code": "E5-02-11A",
+      "name": "SECRETARY OFFICE"
+    },
+    {
+      "code": "E5-02-11B",
+      "name": "HEAD OF DEPT"
+    },
+    {
+      "code": "E5-02-11C",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-02-12",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-13",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-14",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-15",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-16",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-17",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-18",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-19",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-20",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-21",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-22",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-23",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-24",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-25",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-26",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-27",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-28",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-29",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-30",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-31",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-32",
+      "name": "EXECUTIVE SEMINAR ROOM"
+    },
+    {
+      "code": "E5-02-33",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-34",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-35",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-36",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-37",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-38",
+      "name": "STAFF ROOM"
+    },
+    {
+      "code": "E5-02-AHU1",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-02-AHU2",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-02-CWPR",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-02-ELECTR1",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-02-ELECTR2",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-02-EXTCOR",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-02-FEMALE1",
+      "name": "FEMALE TOILET"
+    },
+    {
+      "code": "E5-02-FEMALE2",
+      "name": "FEMALE TOILET"
+    },
+    {
+      "code": "E5-02-INTCOR",
+      "name": "INTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-02-LIFTLOB",
+      "name": "LIFT LOBBY"
+    },
+    {
+      "code": "E5-02-SERV1",
+      "name": "SERVICE ACCESS"
+    },
+    {
+      "code": "E5-02-SERV2",
+      "name": "SERVICE ACCESS"
+    },
+    {
+      "code": "E5-02-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-02-STAIR2",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-02-STORE",
+      "name": "UTILITY RM"
+    },
+    {
+      "code": "E5-02-TELR1",
+      "name": "TELECOMM RISER"
+    },
+    {
+      "code": "E5-02-TELR2",
+      "name": "TELECOMM RISER"
+    }
+  ],
+  "03": [
+    {
+      "code": "E5-03-01",
+      "name": "STAFF ROOM 18"
+    },
+    {
+      "code": "E5-03-02",
+      "name": "STAFF ROOM 17"
+    },
+    {
+      "code": "E5-03-03",
+      "name": "STAFF ROOM 16"
+    },
+    {
+      "code": "E5-03-04",
+      "name": "STAFF ROOM 15"
+    },
+    {
+      "code": "E5-03-05",
+      "name": "STAFF ROOM 14"
+    },
+    {
+      "code": "E5-03-06",
+      "name": "STAFF ROOM 13"
+    },
+    {
+      "code": "E5-03-07",
+      "name": "STAFF ROOM 12"
+    },
+    {
+      "code": "E5-03-08",
+      "name": "STAFF ROOM 11"
+    },
+    {
+      "code": "E5-03-09",
+      "name": "STAFF ROOM 10"
+    },
+    {
+      "code": "E5-03-10",
+      "name": "STAFF ROOM 9"
+    },
+    {
+      "code": "E5-03-11",
+      "name": "STAFF ROOM 8"
+    },
+    {
+      "code": "E5-03-12",
+      "name": "STAFF ROOM 7"
+    },
+    {
+      "code": "E5-03-13",
+      "name": "STAFF ROOM 6"
+    },
+    {
+      "code": "E5-03-14",
+      "name": "STAFF ROOM 5"
+    },
+    {
+      "code": "E5-03-15",
+      "name": "STAFF ROOM 4"
+    },
+    {
+      "code": "E5-03-16",
+      "name": "STAFF ROOM 3"
+    },
+    {
+      "code": "E5-03-17",
+      "name": "STAFF ROOM 2"
+    },
+    {
+      "code": "E5-03-18",
+      "name": "STAFF ROOM 1"
+    },
+    {
+      "code": "E5-03-19",
+      "name": "SEMINAR ROOM (ACTIVE LEARNING ROOM)"
+    },
+    {
+      "code": "E5-03-20",
+      "name": "SEMINAR ROOM"
+    },
+    {
+      "code": "E5-03-21",
+      "name": "SEMINAR ROOM"
+    },
+    {
+      "code": "E5-03-22",
+      "name": "SEMINAR ROOM"
+    },
+    {
+      "code": "E5-03-23",
+      "name": "SEMINAR ROOM"
+    },
+    {
+      "code": "E5-03-24",
+      "name": "COMPUTER TEACHING LAB 1"
+    },
+    {
+      "code": "E5-03-25",
+      "name": "RESEARCH COMPUTATION LAB 1"
+    },
+    {
+      "code": "E5-03-26",
+      "name": "GENERAL STORE"
+    },
+    {
+      "code": "E5-03-27",
+      "name": "STORE ANNEX"
+    },
+    {
+      "code": "E5-03-28",
+      "name": "OFFICE"
+    },
+    {
+      "code": "E5-03-29",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-03-30",
+      "name": "RESEARCH COMPUTING LAB 2"
+    },
+    {
+      "code": "E5-03-31",
+      "name": "RESEARCH STAFF/ STUDENT ROOM"
+    },
+    {
+      "code": "E5-03-32",
+      "name": "INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-03-33",
+      "name": "CHEMICAL STORE CORRIDOR"
+    },
+    {
+      "code": "E5-03-33A",
+      "name": "CHEMICAL STORE 1"
+    },
+    {
+      "code": "E5-03-33B",
+      "name": "CHEMICAL STORE 2"
+    },
+    {
+      "code": "E5-03-33C",
+      "name": "CHEMICAL STORE 3"
+    },
+    {
+      "code": "E5-03-33D",
+      "name": "CHEMICAL STORE 4"
+    },
+    {
+      "code": "E5-03-35",
+      "name": "RESEARCH COMPUTATION LAB 4"
+    },
+    {
+      "code": "E5-03-36",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-03-37",
+      "name": "COMPUTER TEACHING LAB II"
+    },
+    {
+      "code": "E5-03-38",
+      "name": "INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-03-39",
+      "name": "RESEARCH COMPUTING LAB 5"
+    },
+    {
+      "code": "E5-03-40",
+      "name": "STAFF OFFICE"
+    },
+    {
+      "code": "E5-03-AHU1",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-03-AHU2",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-03-CNT",
+      "name": "WIRE CENTRE"
+    },
+    {
+      "code": "E5-03-CWPR1",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR2",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR3",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR4",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR5",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR6",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR7",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-CWPR8",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-03-ELECT",
+      "name": "ELECTRICAL ROOM"
+    },
+    {
+      "code": "E5-03-ELECTR1",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-03-ELECTR2",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-03-EXTCOR",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-03-HR1",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-03-HR2",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-03-INTCOR",
+      "name": "INTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-03-LIFTLOB",
+      "name": "LIFT LOBBY"
+    },
+    {
+      "code": "E5-03-MALE1",
+      "name": "MALE TOILET"
+    },
+    {
+      "code": "E5-03-MALE2",
+      "name": "MALE TOILET"
+    },
+    {
+      "code": "E5-03-SERV1",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-03-SERV2",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-03-SERV3",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-03-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-03-STAIR2",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-03-STAIR3",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-03-STORE",
+      "name": "STORE"
+    },
+    {
+      "code": "E5-03-TELR1",
+      "name": "TELECOMM RISER"
+    },
+    {
+      "code": "E5-03-TELR2",
+      "name": "TELECOMM RISER"
+    }
+  ],
+  "04": [
+    {
+      "code": "E5-04-01",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-02",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-03",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-04",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-05",
+      "name": "RESEARCH LAB 3"
+    },
+    {
+      "code": "E5-04-06",
+      "name": "RESEARCH LAB 4"
+    },
+    {
+      "code": "E5-04-07",
+      "name": "RESEARCH LAB 5"
+    },
+    {
+      "code": "E5-04-08",
+      "name": "RESEARCH LAB 6"
+    },
+    {
+      "code": "E5-04-09",
+      "name": "COMMON FAC. ROOM 1"
+    },
+    {
+      "code": "E5-04-10",
+      "name": "COMMON FAC. ROOM 2"
+    },
+    {
+      "code": "E5-04-11",
+      "name": "RESEARCH LAB 7"
+    },
+    {
+      "code": "E5-04-11A",
+      "name": "FLAMMABLE GAS CABINET"
+    },
+    {
+      "code": "E5-04-12",
+      "name": "RESEARCH LAB 8"
+    },
+    {
+      "code": "E5-04-13",
+      "name": "RESEARCH STAFF/STUDENT ROOM 2"
+    },
+    {
+      "code": "E5-04-14",
+      "name": "RESEARCH STAFF/STUDENT ROOM 3"
+    },
+    {
+      "code": "E5-04-15",
+      "name": "RESEARCH STAFF/STUDENT ROOM 4"
+    },
+    {
+      "code": "E5-04-16",
+      "name": "RESEARCH LAB 9"
+    },
+    {
+      "code": "E5-04-17",
+      "name": "RESEARCH LAB 10"
+    },
+    {
+      "code": "E5-04-18",
+      "name": "RESEARCH LAB 11"
+    },
+    {
+      "code": "E5-04-19",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-20",
+      "name": "SPACE BANK (PRVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-21",
+      "name": "SPACE BANK (PREVIOUS FROM CBHE)"
+    },
+    {
+      "code": "E5-04-22",
+      "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+    },
+    {
+      "code": "E5-04-23",
+      "name": "UTILITIES ROOM (SPACE BANK)"
+    },
+    {
+      "code": "E5-04-24",
+      "name": "INSTRUMENT ROOM 3"
+    },
+    {
+      "code": "E5-04-25",
+      "name": "RESEARCH LAB 14"
+    },
+    {
+      "code": "E5-04-26",
+      "name": "RESEARCH LAB 15 (VACANT)"
+    },
+    {
+      "code": "E5-04-27",
+      "name": "RESEARCH COMPUTING LAB 1"
+    },
+    {
+      "code": "E5-04-28",
+      "name": "RESEARCH COMPUTING LAB 2"
+    },
+    {
+      "code": "E5-04-29",
+      "name": "RESEARCH LAB 16"
+    },
+    {
+      "code": "E5-04-30",
+      "name": "RESEARCH LAB 17"
+    },
+    {
+      "code": "E5-04-31",
+      "name": "RESEARCH LAB 18"
+    },
+    {
+      "code": "E5-04-32",
+      "name": "RESEARCH STAFF/STUDENT ROOM 5"
+    },
+    {
+      "code": "E5-04-33",
+      "name": "EQUIPMENT ROOM"
+    },
+    {
+      "code": "E5-04-AHU1",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-04-AHU2",
+      "name": "AHU ROOM"
+    },
+    {
+      "code": "E5-04-CWPR1",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR2",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR3",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR4",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR5",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR6",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR7",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-CWPR8",
+      "name": "CHILLED WATER PIPE RISER"
+    },
+    {
+      "code": "E5-04-ELECT1",
+      "name": "ELECTRICAL ROOM"
+    },
+    {
+      "code": "E5-04-ELECT2",
+      "name": "ELECTRICAL ROOM"
+    },
+    {
+      "code": "E5-04-ELECTR1",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-04-ELECTR2",
+      "name": "ELECTRICAL RISER"
+    },
+    {
+      "code": "E5-04-EXTCOR",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-04-FEMALE1",
+      "name": "FEMALE TOILET"
+    },
+    {
+      "code": "E5-04-FEMALE2",
+      "name": "FEMALE TOILET"
+    },
+    {
+      "code": "E5-04-HR1",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-04-HR2",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-04-HR3",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-04-HR4",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-04-INTCOR",
+      "name": "INTERNAL CIRCULATION"
+    },
+    {
+      "code": "E5-04-LIFTLOB",
+      "name": "LIFT LOBBY"
+    },
+    {
+      "code": "E5-04-SERV1",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-04-SERV2",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-04-SERV3",
+      "name": "SERVICE CORRIDOR"
+    },
+    {
+      "code": "E5-04-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-04-STAIR2",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-04-STAIR3",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-04-TELR1",
+      "name": "TELECOMM RISER"
+    },
+    {
+      "code": "E5-04-TELR2",
+      "name": "TELECOMM RISER"
+    }
+  ],
+  "B1": [
+    {
+      "code": "E5-B1-01",
+      "name": "INSTRUMENT ROOM (AFM)"
+    },
+    {
+      "code": "E5-B1-01_TO_10",
+      "name": "INTERNAL CIRCULATION"
+    },
+    {
+      "code": "E5-B1-02",
+      "name": "RESEARCH INSTRUMENT LAB"
+    },
+    {
+      "code": "E5-B1-03",
+      "name": "RESEARCH COMPUTION LAB 3"
+    },
+    {
+      "code": "E5-B1-04",
+      "name": "RESEARCH COMPUTION LAB 4"
+    },
+    {
+      "code": "E5-B1-05",
+      "name": "RESEARCH STAFF/STUDENT ROOM"
+    },
+    {
+      "code": "E5-B1-06",
+      "name": "RESEARCH STAFF/STUDENT ROOM"
+    },
+    {
+      "code": "E5-B1-07",
+      "name": "RESEARCH LAB 1"
+    },
+    {
+      "code": "E5-B1-08",
+      "name": "RESEARCH LAB 2"
+    },
+    {
+      "code": "E5-B1-09",
+      "name": "INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-B1-09A",
+      "name": "INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-B1-10",
+      "name": "INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-B1-11",
+      "name": "RESEARCH LAB 3 / INSTRUMENT ROOM"
+    },
+    {
+      "code": "E5-B1-12",
+      "name": "RESEARCH LAB 5"
+    },
+    {
+      "code": "E5-B1-12A",
+      "name": "RESEARCH LAB"
+    },
+    {
+      "code": "E5-B1-13",
+      "name": "RESEARCH LAB 6"
+    },
+    {
+      "code": "E5-B1-14",
+      "name": "RESEARCH LAB 4"
+    },
+    {
+      "code": "E5-B1-18",
+      "name": "MATERIAL LAB 5 (FABRICATION & PROCESSING)"
+    },
+    {
+      "code": "E5-B1-ELECT",
+      "name": "ELECTRICAL ROOM"
+    },
+    {
+      "code": "E5-B1-EXTCOR1",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-B1-EXTCOR2",
+      "name": "EXTERNAL CORRIDOR"
+    },
+    {
+      "code": "E5-B1-GASF",
+      "name": "FLAMMABLE GAS STORE"
+    },
+    {
+      "code": "E5-B1-HR",
+      "name": "HOSEREEL"
+    },
+    {
+      "code": "E5-B1-LIFT",
+      "name": "LIFT"
+    },
+    {
+      "code": "E5-B1-LIFTLOB",
+      "name": "LIFT LOBBY"
+    },
+    {
+      "code": "E5-B1-SERV",
+      "name": "SERVICE ACCESS TUNNEL"
+    },
+    {
+      "code": "E5-B1-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-B1-STAIR2",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-B1-STAIR3",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-B1-STAIR4",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-B1-STAIR5",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-B1-STORE1",
+      "name": "GAS CYLINDER ROOM"
+    },
+    {
+      "code": "E5-B1-STORE2",
+      "name": "AIR COMPRESSOR ROOM"
+    }
+  ],
+  "R1": [
+    {
+      "code": "E5-R1-LIFTM",
+      "name": "LIFT MOTOR ROOM"
+    },
+    {
+      "code": "E5-R1-STAIR1",
+      "name": "STAIRCASE"
+    },
+    {
+      "code": "E5-R1-STAIR2",
+      "name": "STAIRCASE"
+    }
+  ]
+}
