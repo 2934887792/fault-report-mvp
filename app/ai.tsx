@@ -7,7 +7,7 @@ export default function AI() {
         AI Assist
       </Text>
       <Text style={{ marginTop: 8, opacity: 0.7 }}>
-        Coming soon.
+        Coming soon
       </Text>
     </View>
   );
