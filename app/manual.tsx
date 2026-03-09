@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Alert,
   Image,
@@ -14,6 +14,11 @@ import * as ImagePicker from "expo-image-picker";
 import { router, useFocusEffect } from "expo-router";
 import { insertReport } from "../src/db/db";
 import rawRoomsByFloor from "../scripts/e5_rooms.json";
+import {
+  getLocationComparedToReference,
+  REFERENCE_HOME,
+  type LocationStatusState,
+} from "../src/location/gps";
 
 type Room = {
   code: string;
@@ -32,6 +37,11 @@ export default function Manual() {
 
   const [description, setDescription] = useState("");
   const [imageUri, setImageUri] = useState("");
+
+  const [locationStatus, setLocationStatus] = useState<LocationStatusState>({
+    type: "idle",
+    message: "",
+  });
 
   const resetForm = useCallback(() => {
     setFloor("");
@@ -108,6 +118,70 @@ export default function Manual() {
     setRoomOpen(false);
   }
 
+  useEffect(() => {
+    let cancelled = false;
+
+    (async () => {
+      setLocationStatus({
+        type: "loading",
+        message: "正在尝试获取当前位置…",
+      });
+
+      const result = await getLocationComparedToReference(REFERENCE_HOME);
+
+      if (!cancelled) {
+        setLocationStatus(result);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  function renderLocationBanner() {
+    if (locationStatus.type === "idle") return null;
+
+    let title = "定位提示";
+    let color = "#4B5563";
+    let bg = "#E5E7EB";
+
+    if (locationStatus.type === "loading") {
+      title = "正在定位";
+      color = "#2563EB";
+      bg = "#DBEAFE";
+    } else if (locationStatus.type === "denied") {
+      title = "未授权定位";
+      color = "#F97316";
+      bg = "#FFEDD5";
+    } else if (locationStatus.type === "error") {
+      title = "定位失败";
+      color = "#DC2626";
+      bg = "#FEE2E2";
+    } else if (locationStatus.type === "success") {
+      title = "定位结果";
+      if (locationStatus.proximityLabel === "near") {
+        color = "#16A34A";
+        bg = "#DCFCE7";
+      } else if (locationStatus.proximityLabel === "medium") {
+        color = "#F97316";
+        bg = "#FFEDD5";
+      } else {
+        color = "#6B7280";
+        bg = "#E5E7EB";
+      }
+    }
+
+    return (
+      <View style={[styles.locationBanner, { backgroundColor: bg }]}>
+        <Text style={[styles.locationBannerTitle, { color }]}>{title}</Text>
+        {locationStatus.message ? (
+          <Text style={styles.locationBannerText}>{locationStatus.message}</Text>
+        ) : null}
+      </View>
+    );
+  }
+
   return (
     <>
       <ScrollView contentContainerStyle={styles.container}>
@@ -118,6 +192,8 @@ export default function Manual() {
             so the issue can be followed up efficiently.
           </Text>
         </View>
+
+        {renderLocationBanner()}
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Location</Text>
@@ -457,5 +533,20 @@ const styles = StyleSheet.create({
     marginTop: 2,
     fontSize: 12,
     color: "#6B7280",
+  },
+  locationBanner: {
+    borderRadius: 12,
+    padding: 10,
+    marginBottom: 8,
+  },
+  locationBannerTitle: {
+    fontSize: 13,
+    fontWeight: "700",
+    marginBottom: 2,
+  },
+  locationBannerText: {
+    fontSize: 12,
+    color: "#374151",
+    lineHeight: 16,
   },
 });

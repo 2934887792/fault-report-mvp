@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "App 使用你的位置信息来判断你是否在参考地点附近，方便你更准确地报障。"
+      }
     },
     "android": {
       "adaptiveIcon": {
