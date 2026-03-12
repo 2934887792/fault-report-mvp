@@ -25,7 +25,7 @@ import {
   classifyPointAgainstBuilding,
   findBestMatchingBuilding,
 } from "../src/location/geometry";
-import { styles } from "./manual.styles";
+import { styles } from "../src/styles/manual.styles";
 
 type Room = {
   code: string;
@@ -53,6 +53,10 @@ type LocationStatusState = {
   coords?: LatLngPoint;
 };
 
+type PositionResult =
+  | { ok: true; coords: Location.LocationObjectCoords }
+  | { ok: false; reason: "denied" | "error"; error?: unknown };
+
 const roomsByFloor: Record<string, Room[]> = rawRoomsByFloor;
 const BUILDING = "E5";
 const FLOORS = Object.keys(roomsByFloor).sort();
@@ -60,10 +64,20 @@ const FLOORS = Object.keys(roomsByFloor).sort();
 const NEAR_THRESHOLD_METERS = 20;
 const NONE_NEARBY_THRESHOLD_METERS = 100;
 const LOW_CONFIDENCE_ACCURACY_METERS = 50;
+const ENABLE_LOCATION_TIMING_LOG = true;
 
-async function getCurrentPositionSafe(): Promise<
-  | { ok: true; coords: Location.LocationObjectCoords }
-  | { ok: false; reason: "denied" | "error"; error?: unknown }
+function nowMs() {
+  return Date.now();
+}
+
+function logTiming(label: string, startedAt: number) {
+  if (!ENABLE_LOCATION_TIMING_LOG) return;
+  const elapsed = Date.now() - startedAt;
+  console.log(`[manual/location] ${label}: ${elapsed}ms`);
+}
+
+async function ensureLocationPermission(): Promise<
+  { ok: true } | { ok: false; reason: "denied" | "error"; error?: unknown }
 > {
   try {
     const { status } = await Location.requestForegroundPermissionsAsync();
@@ -72,6 +86,28 @@ async function getCurrentPositionSafe(): Promise<
       return { ok: false, reason: "denied" };
     }
 
+    return { ok: true };
+  } catch (error) {
+    return { ok: false, reason: "error", error };
+  }
+}
+
+async function getLastKnownPositionSafe(): Promise<PositionResult> {
+  try {
+    const position = await Location.getLastKnownPositionAsync();
+
+    if (!position?.coords) {
+      return { ok: false, reason: "error" };
+    }
+
+    return { ok: true, coords: position.coords };
+  } catch (error) {
+    return { ok: false, reason: "error", error };
+  }
+}
+
+async function getCurrentPositionSafe(): Promise<PositionResult> {
+  try {
     const position = await Location.getCurrentPositionAsync({
       accuracy: Location.Accuracy.Balanced,
     });
@@ -109,7 +145,11 @@ function buildLocationMessage(params: {
     headline = `You appear to be inside ${matchedBuilding.name}.`;
   } else if (relation === "near" && matchedBuilding) {
     headline = `You appear to be near ${matchedBuilding.name}.`;
-  } else if (relation === "far" && matchedBuilding && roundedMatchedDistance != null) {
+  } else if (
+    relation === "far" &&
+    matchedBuilding &&
+    roundedMatchedDistance != null
+  ) {
     headline = `You are about ${roundedMatchedDistance} m from ${matchedBuilding.name}.`;
   } else {
     headline = "You do not appear to be near any supported building.";
@@ -132,26 +172,12 @@ function buildLocationMessage(params: {
   return `${headline}\n${detail}${warning}`;
 }
 
-async function getLocationComparedToBuildings(): Promise<LocationStatusState> {
-  const pos = await getCurrentPositionSafe();
-
-  if (!pos.ok) {
-    if (pos.reason === "denied") {
-      return {
-        type: "denied",
-        message:
-          "Location permission was not granted. You can still select the room manually.",
-      };
-    }
-
-    return {
-      type: "error",
-      message:
-        "There was an error while fetching your location. You can still select the room manually.",
-    };
-  }
-
-  const { latitude, longitude, accuracy } = pos.coords;
+function buildLocationStatusFromCoords(
+  coords: Location.LocationObjectCoords,
+  sourceLabel = "unknown"
+): LocationStatusState {
+  const timingStart = nowMs();
+  const { latitude, longitude, accuracy } = coords;
   const point: LatLngPoint = { latitude, longitude };
 
   const bestMatch = findBestMatchingBuilding(
@@ -166,8 +192,10 @@ async function getLocationComparedToBuildings(): Promise<LocationStatusState> {
     NEAR_THRESHOLD_METERS
   );
 
+  let result: LocationStatusState;
+
   if (!bestMatch) {
-    return {
+    result = {
       type: "success",
       relation: "none-nearby",
       e5DistanceMeters: e5Match.distanceMeters,
@@ -181,42 +209,45 @@ async function getLocationComparedToBuildings(): Promise<LocationStatusState> {
         accuracyMeters: accuracy ?? undefined,
       }),
     };
-  }
-
-  let relation: MatchRelation;
-
-  if (bestMatch.relation === "inside") {
-    relation = "inside";
-  } else if (bestMatch.relation === "near") {
-    relation = "near";
-  } else if (bestMatch.distanceMeters > NONE_NEARBY_THRESHOLD_METERS) {
-    relation = "none-nearby";
   } else {
-    relation = "far";
-  }
+    let relation: MatchRelation;
 
-  return {
-    type: "success",
-    relation,
-    matchedBuildingId:
-      relation === "none-nearby" ? undefined : bestMatch.building.id,
-    matchedBuildingName:
-      relation === "none-nearby" ? undefined : bestMatch.building.name,
-    distanceMeters:
-      relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
-    e5DistanceMeters: e5Match.distanceMeters,
-    accuracyMeters: accuracy ?? undefined,
-    coords: point,
-    message: buildLocationMessage({
+    if (bestMatch.relation === "inside") {
+      relation = "inside";
+    } else if (bestMatch.relation === "near") {
+      relation = "near";
+    } else if (bestMatch.distanceMeters > NONE_NEARBY_THRESHOLD_METERS) {
+      relation = "none-nearby";
+    } else {
+      relation = "far";
+    }
+
+    result = {
+      type: "success",
       relation,
-      matchedBuilding:
-        relation === "none-nearby" ? null : bestMatch.building,
-      matchedDistanceMeters:
+      matchedBuildingId:
+        relation === "none-nearby" ? undefined : bestMatch.building.id,
+      matchedBuildingName:
+        relation === "none-nearby" ? undefined : bestMatch.building.name,
+      distanceMeters:
         relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
       e5DistanceMeters: e5Match.distanceMeters,
       accuracyMeters: accuracy ?? undefined,
-    }),
-  };
+      coords: point,
+      message: buildLocationMessage({
+        relation,
+        matchedBuilding:
+          relation === "none-nearby" ? null : bestMatch.building,
+        matchedDistanceMeters:
+          relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
+        e5DistanceMeters: e5Match.distanceMeters,
+        accuracyMeters: accuracy ?? undefined,
+      }),
+    };
+  }
+
+  logTiming(`buildLocationStatusFromCoords(${sourceLabel})`, timingStart);
+  return result;
 }
 
 export default function Manual() {
@@ -247,19 +278,77 @@ export default function Manual() {
   }, []);
 
   const refreshLocation = useCallback(async () => {
+    const totalStart = nowMs();
     setIsRefreshingLocation(true);
-    setLocationStatus({
-      type: "loading",
-      message: "Trying to get your current location...",
-    });
+
+    const permissionStart = nowMs();
+    const permission = await ensureLocationPermission();
+    logTiming("ensureLocationPermission", permissionStart);
+
+    if (!permission.ok) {
+      if (permission.reason === "denied") {
+        setLocationStatus({
+          type: "denied",
+          message:
+            "Location permission was not granted. You can still select the room manually.",
+        });
+      } else {
+        setLocationStatus({
+          type: "error",
+          message:
+            "There was an error while checking location permission. You can still select the room manually.",
+        });
+      }
+      setIsRefreshingLocation(false);
+      logTiming("refreshLocation(total)", totalStart);
+      return;
+    }
+
+    if (locationStatus.type === "idle") {
+      setLocationStatus({
+        type: "loading",
+        message: "Trying to get your current location...",
+      });
+    }
 
     try {
-      const result = await getLocationComparedToBuildings();
-      setLocationStatus(result);
+      const lastKnownStart = nowMs();
+      const lastKnown = await getLastKnownPositionSafe();
+      logTiming("getLastKnownPositionSafe", lastKnownStart);
+
+      if (lastKnown.ok) {
+        const buildStart = nowMs();
+        const status = buildLocationStatusFromCoords(lastKnown.coords, "lastKnown");
+        logTiming("setLocationStatus(lastKnown/build only)", buildStart);
+        setLocationStatus(status);
+      } else if (locationStatus.type === "idle") {
+        setLocationStatus({
+          type: "loading",
+          message: "Trying to get your current location...",
+        });
+      }
+
+      const currentStart = nowMs();
+      const current = await getCurrentPositionSafe();
+      logTiming("getCurrentPositionSafe", currentStart);
+
+      if (current.ok) {
+        const buildStart = nowMs();
+        const status = buildLocationStatusFromCoords(current.coords, "current");
+        logTiming("setLocationStatus(current/build only)", buildStart);
+        setLocationStatus(status);
+      } else if (!lastKnown.ok) {
+        setLocationStatus({
+          type: "error",
+          message:
+            "There was an error while fetching your location. You can still select the room manually.",
+        });
+      }
     } finally {
       setIsRefreshingLocation(false);
+      logTiming("refreshLocation(total)", totalStart);
     }
-  }, []);
+  }, [locationStatus.type]);
 
   useFocusEffect(
     useCallback(() => {
