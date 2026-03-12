@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import {
   Alert,
   Image,
@@ -8,32 +8,223 @@ import {
   Text,
   TextInput,
   View,
-  StyleSheet,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { router, useFocusEffect } from "expo-router";
+import * as Location from "expo-location";
+
 import { insertReport } from "../src/db/db";
 import rawRoomsByFloor from "../scripts/e5_rooms.json";
 import {
-  getLocationComparedToReference,
-  REFERENCE_HOME,
-  type LocationStatusState,
-} from "../src/location/gps";
+  BUILDINGS,
+  E5_BUILDING,
+  type BuildingPolygon,
+  type LatLngPoint,
+} from "../src/location/buildings";
+import {
+  classifyPointAgainstBuilding,
+  findBestMatchingBuilding,
+} from "../src/location/geometry";
+import { styles } from "./manual.styles";
 
 type Room = {
   code: string;
   name: string;
 };
 
+type LocationStatusType =
+  | "idle"
+  | "loading"
+  | "denied"
+  | "error"
+  | "success";
+
+type MatchRelation = "inside" | "near" | "far" | "none-nearby";
+
+type LocationStatusState = {
+  type: LocationStatusType;
+  message: string;
+  relation?: MatchRelation;
+  matchedBuildingId?: string;
+  matchedBuildingName?: string;
+  distanceMeters?: number;
+  e5DistanceMeters?: number;
+  accuracyMeters?: number;
+  coords?: LatLngPoint;
+};
+
 const roomsByFloor: Record<string, Room[]> = rawRoomsByFloor;
 const BUILDING = "E5";
 const FLOORS = Object.keys(roomsByFloor).sort();
+
+const NEAR_THRESHOLD_METERS = 20;
+const NONE_NEARBY_THRESHOLD_METERS = 100;
+const LOW_CONFIDENCE_ACCURACY_METERS = 50;
+
+async function getCurrentPositionSafe(): Promise<
+  | { ok: true; coords: Location.LocationObjectCoords }
+  | { ok: false; reason: "denied" | "error"; error?: unknown }
+> {
+  try {
+    const { status } = await Location.requestForegroundPermissionsAsync();
+
+    if (status !== "granted") {
+      return { ok: false, reason: "denied" };
+    }
+
+    const position = await Location.getCurrentPositionAsync({
+      accuracy: Location.Accuracy.Balanced,
+    });
+
+    return { ok: true, coords: position.coords };
+  } catch (error) {
+    return { ok: false, reason: "error", error };
+  }
+}
+
+function buildLocationMessage(params: {
+  relation: MatchRelation;
+  matchedBuilding?: BuildingPolygon | null;
+  matchedDistanceMeters?: number;
+  e5DistanceMeters: number;
+  accuracyMeters?: number;
+}): string {
+  const {
+    relation,
+    matchedBuilding,
+    matchedDistanceMeters,
+    e5DistanceMeters,
+    accuracyMeters,
+  } = params;
+
+  const roundedMatchedDistance =
+    matchedDistanceMeters != null ? Math.round(matchedDistanceMeters) : undefined;
+  const roundedE5Distance = Math.round(e5DistanceMeters);
+  const roundedAccuracy =
+    accuracyMeters != null ? Math.round(accuracyMeters) : undefined;
+
+  let headline = "";
+
+  if (relation === "inside" && matchedBuilding) {
+    headline = `You appear to be inside ${matchedBuilding.name}.`;
+  } else if (relation === "near" && matchedBuilding) {
+    headline = `You appear to be near ${matchedBuilding.name}.`;
+  } else if (relation === "far" && matchedBuilding && roundedMatchedDistance != null) {
+    headline = `You are about ${roundedMatchedDistance} m from ${matchedBuilding.name}.`;
+  } else {
+    headline = "You do not appear to be near any supported building.";
+  }
+
+  let detail = `Distance to E5: ${roundedE5Distance} m`;
+
+  if (roundedAccuracy != null) {
+    detail += ` · GPS accuracy ±${roundedAccuracy} m`;
+  }
+
+  let warning = "";
+  if (
+    roundedAccuracy != null &&
+    roundedAccuracy > LOW_CONFIDENCE_ACCURACY_METERS
+  ) {
+    warning = "\nLocation may be inaccurate.";
+  }
+
+  return `${headline}\n${detail}${warning}`;
+}
+
+async function getLocationComparedToBuildings(): Promise<LocationStatusState> {
+  const pos = await getCurrentPositionSafe();
+
+  if (!pos.ok) {
+    if (pos.reason === "denied") {
+      return {
+        type: "denied",
+        message:
+          "Location permission was not granted. You can still select the room manually.",
+      };
+    }
+
+    return {
+      type: "error",
+      message:
+        "There was an error while fetching your location. You can still select the room manually.",
+    };
+  }
+
+  const { latitude, longitude, accuracy } = pos.coords;
+  const point: LatLngPoint = { latitude, longitude };
+
+  const bestMatch = findBestMatchingBuilding(
+    point,
+    BUILDINGS,
+    NEAR_THRESHOLD_METERS
+  );
+
+  const e5Match = classifyPointAgainstBuilding(
+    point,
+    E5_BUILDING,
+    NEAR_THRESHOLD_METERS
+  );
+
+  if (!bestMatch) {
+    return {
+      type: "success",
+      relation: "none-nearby",
+      e5DistanceMeters: e5Match.distanceMeters,
+      accuracyMeters: accuracy ?? undefined,
+      coords: point,
+      message: buildLocationMessage({
+        relation: "none-nearby",
+        matchedBuilding: null,
+        matchedDistanceMeters: undefined,
+        e5DistanceMeters: e5Match.distanceMeters,
+        accuracyMeters: accuracy ?? undefined,
+      }),
+    };
+  }
+
+  let relation: MatchRelation;
+
+  if (bestMatch.relation === "inside") {
+    relation = "inside";
+  } else if (bestMatch.relation === "near") {
+    relation = "near";
+  } else if (bestMatch.distanceMeters > NONE_NEARBY_THRESHOLD_METERS) {
+    relation = "none-nearby";
+  } else {
+    relation = "far";
+  }
+
+  return {
+    type: "success",
+    relation,
+    matchedBuildingId:
+      relation === "none-nearby" ? undefined : bestMatch.building.id,
+    matchedBuildingName:
+      relation === "none-nearby" ? undefined : bestMatch.building.name,
+    distanceMeters:
+      relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
+    e5DistanceMeters: e5Match.distanceMeters,
+    accuracyMeters: accuracy ?? undefined,
+    coords: point,
+    message: buildLocationMessage({
+      relation,
+      matchedBuilding:
+        relation === "none-nearby" ? null : bestMatch.building,
+      matchedDistanceMeters:
+        relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
+      e5DistanceMeters: e5Match.distanceMeters,
+      accuracyMeters: accuracy ?? undefined,
+    }),
+  };
+}
 
 export default function Manual() {
   const [floor, setFloor] = useState("");
   const [roomCode, setRoomCode] = useState("");
   const [roomName, setRoomName] = useState("");
   const [roomOpen, setRoomOpen] = useState(false);
+  const [roomQuery, setRoomQuery] = useState("");
 
   const [description, setDescription] = useState("");
   const [imageUri, setImageUri] = useState("");
@@ -43,6 +234,8 @@ export default function Manual() {
     message: "",
   });
 
+  const [isRefreshingLocation, setIsRefreshingLocation] = useState(false);
+
   const resetForm = useCallback(() => {
     setFloor("");
     setRoomCode("");
@@ -50,12 +243,29 @@ export default function Manual() {
     setDescription("");
     setImageUri("");
     setRoomOpen(false);
+    setRoomQuery("");
+  }, []);
+
+  const refreshLocation = useCallback(async () => {
+    setIsRefreshingLocation(true);
+    setLocationStatus({
+      type: "loading",
+      message: "Trying to get your current location...",
+    });
+
+    try {
+      const result = await getLocationComparedToBuildings();
+      setLocationStatus(result);
+    } finally {
+      setIsRefreshingLocation(false);
+    }
   }, []);
 
   useFocusEffect(
     useCallback(() => {
       resetForm();
-    }, [resetForm])
+      refreshLocation();
+    }, [resetForm, refreshLocation])
   );
 
   const roomOptions = useMemo<Room[]>(() => {
@@ -63,19 +273,34 @@ export default function Manual() {
     return roomsByFloor[floor] ?? [];
   }, [floor]);
 
+  const filteredRoomOptions = useMemo<Room[]>(() => {
+    const query = roomQuery.trim().toLowerCase();
+    if (!query) return roomOptions;
+
+    return roomOptions.filter((room) => {
+      return (
+        room.code.toLowerCase().includes(query) ||
+        room.name.toLowerCase().includes(query)
+      );
+    });
+  }, [roomOptions, roomQuery]);
+
   const hasEvidence = Boolean(imageUri) || description.trim().length > 0;
   const canSubmit = Boolean(floor) && Boolean(roomCode) && hasEvidence;
 
   async function pickImage() {
     const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
+
     if (perm.status !== "granted") {
       Alert.alert("Permission needed", "Please allow photo access.");
       return;
     }
+
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       quality: 0.7,
     });
+
     if (!result.canceled) {
       setImageUri(result.assets[0].uri);
     }
@@ -109,72 +334,75 @@ export default function Manual() {
       Alert.alert("Select floor first", "Please select a floor first.");
       return;
     }
+
     setRoomOpen(true);
   }
 
-  function selectRoom(r: Room) {
-    setRoomCode(r.code);
-    setRoomName(r.name);
+  function selectRoom(room: Room) {
+    setRoomCode(room.code);
+    setRoomName(room.name);
     setRoomOpen(false);
+    setRoomQuery("");
   }
-
-  useEffect(() => {
-    let cancelled = false;
-
-    (async () => {
-      setLocationStatus({
-        type: "loading",
-        message: "正在尝试获取当前位置…",
-      });
-
-      const result = await getLocationComparedToReference(REFERENCE_HOME);
-
-      if (!cancelled) {
-        setLocationStatus(result);
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   function renderLocationBanner() {
     if (locationStatus.type === "idle") return null;
 
-    let title = "定位提示";
+    let title = "Location status";
     let color = "#4B5563";
     let bg = "#E5E7EB";
 
     if (locationStatus.type === "loading") {
-      title = "正在定位";
+      title = "Locating";
       color = "#2563EB";
       bg = "#DBEAFE";
     } else if (locationStatus.type === "denied") {
-      title = "未授权定位";
+      title = "Location permission denied";
       color = "#F97316";
       bg = "#FFEDD5";
     } else if (locationStatus.type === "error") {
-      title = "定位失败";
+      title = "Location failed";
       color = "#DC2626";
       bg = "#FEE2E2";
     } else if (locationStatus.type === "success") {
-      title = "定位结果";
-      if (locationStatus.proximityLabel === "near") {
+      if (locationStatus.relation === "inside") {
+        title = `Inside ${locationStatus.matchedBuildingName ?? "building"}`;
         color = "#16A34A";
         bg = "#DCFCE7";
-      } else if (locationStatus.proximityLabel === "medium") {
+      } else if (locationStatus.relation === "near") {
+        title = `Near ${locationStatus.matchedBuildingName ?? "building"}`;
         color = "#F97316";
         bg = "#FFEDD5";
+      } else if (locationStatus.relation === "far") {
+        title = `Closest: ${locationStatus.matchedBuildingName ?? "building"}`;
+        color = "#6B7280";
+        bg = "#E5E7EB";
       } else {
+        title = "No nearby supported building";
         color = "#6B7280";
         bg = "#E5E7EB";
       }
     }
 
     return (
-      <View style={[styles.locationBanner, { backgroundColor: bg }]}>
-        <Text style={[styles.locationBannerTitle, { color }]}>{title}</Text>
+      <View style={[styles.locationBanner, { backgroundColor: bg }]}> 
+        <View style={styles.locationBannerHeader}>
+          <Text style={[styles.locationBannerTitle, { color }]}>{title}</Text>
+
+          <Pressable
+            onPress={refreshLocation}
+            disabled={isRefreshingLocation}
+            style={[
+              styles.refreshLocationButton,
+              isRefreshingLocation && styles.refreshLocationButtonDisabled,
+            ]}
+          >
+            <Text style={styles.refreshLocationButtonText}>
+              {isRefreshingLocation ? "Refreshing..." : "Refresh"}
+            </Text>
+          </Pressable>
+        </View>
+
         {locationStatus.message ? (
           <Text style={styles.locationBannerText}>{locationStatus.message}</Text>
         ) : null}
@@ -197,7 +425,7 @@ export default function Manual() {
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Location</Text>
-          <Text style={styles.sectionHint}>Building is fixed to E5.</Text>
+          <Text style={styles.sectionHint}>Building is fixed to E5 for now.</Text>
 
           <Text style={styles.fieldLabel}>Floor</Text>
           <ScrollView
@@ -207,6 +435,7 @@ export default function Manual() {
           >
             {FLOORS.map((f) => {
               const selected = floor === f;
+
               return (
                 <Pressable
                   key={f}
@@ -214,6 +443,7 @@ export default function Manual() {
                     setFloor(f);
                     setRoomCode("");
                     setRoomName("");
+                    setRoomQuery("");
                   }}
                   style={[
                     styles.floorChip,
@@ -239,9 +469,7 @@ export default function Manual() {
               <Text style={styles.roomCode}>
                 {roomCode ? roomCode : "Please select a room"}
               </Text>
-              {roomName ? (
-                <Text style={styles.roomName}>{roomName}</Text>
-              ) : null}
+              {roomName ? <Text style={styles.roomName}>{roomName}</Text> : null}
             </View>
             <Text style={styles.chevron}>▼</Text>
           </Pressable>
@@ -304,7 +532,10 @@ export default function Manual() {
         onRequestClose={() => setRoomOpen(false)}
       >
         <Pressable
-          onPress={() => setRoomOpen(false)}
+          onPress={() => {
+            setRoomOpen(false);
+            setRoomQuery("");
+          }}
           style={styles.modalBackdrop}
         >
           <Pressable onPress={() => {}} style={styles.modalSheet}>
@@ -312,22 +543,40 @@ export default function Manual() {
               <Text style={styles.modalTitle}>
                 Select a room (Level {floor || "—"})
               </Text>
-              <Pressable onPress={() => setRoomOpen(false)}>
+              <Pressable
+                onPress={() => {
+                  setRoomOpen(false);
+                  setRoomQuery("");
+                }}
+              >
                 <Text style={styles.modalClose}>Close</Text>
               </Pressable>
             </View>
 
+            <TextInput
+              value={roomQuery}
+              onChangeText={setRoomQuery}
+              placeholder="Search room code or name..."
+              style={styles.searchInput}
+            />
+
             <ScrollView>
-              {roomOptions.map((r) => (
-                <Pressable
-                  key={r.code}
-                  onPress={() => selectRoom(r)}
-                  style={styles.roomOption}
-                >
-                  <Text style={styles.roomOptionCode}>{r.code}</Text>
-                  <Text style={styles.roomOptionName}>{r.name}</Text>
-                </Pressable>
-              ))}
+              {filteredRoomOptions.length === 0 ? (
+                <Text style={styles.emptySearchText}>
+                  No matching rooms found.
+                </Text>
+              ) : (
+                filteredRoomOptions.map((room) => (
+                  <Pressable
+                    key={room.code}
+                    onPress={() => selectRoom(room)}
+                    style={styles.roomOption}
+                  >
+                    <Text style={styles.roomOptionCode}>{room.code}</Text>
+                    <Text style={styles.roomOptionName}>{room.name}</Text>
+                  </Pressable>
+                ))
+              )}
             </ScrollView>
           </Pressable>
         </Pressable>
@@ -335,218 +584,3 @@ export default function Manual() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 16,
-    paddingBottom: 24,
-    backgroundColor: "#F5F6FA",
-    gap: 16,
-  },
-  header: {
-    gap: 6,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "800",
-    color: "#111827",
-  },
-  subtitle: {
-    fontSize: 13,
-    color: "#6B7280",
-    lineHeight: 18,
-  },
-  section: {
-    borderRadius: 14,
-    padding: 14,
-    backgroundColor: "#FFFFFF",
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-    gap: 10,
-  },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#111827",
-  },
-  sectionHint: {
-    fontSize: 12,
-    color: "#6B7280",
-  },
-  fieldLabel: {
-    marginTop: 6,
-    marginBottom: 4,
-    fontSize: 13,
-    fontWeight: "600",
-    color: "#374151",
-  },
-  floorList: {
-    gap: 8,
-    marginVertical: 2,
-  },
-  floorChip: {
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    borderRadius: 999,
-    borderWidth: 1,
-    borderColor: "#D1D5DB",
-    backgroundColor: "#FFFFFF",
-  },
-  floorChipSelected: {
-    backgroundColor: "#1D4ED8",
-    borderColor: "#1D4ED8",
-  },
-  floorChipText: {
-    fontSize: 13,
-    fontWeight: "600",
-    color: "#111827",
-  },
-  floorChipTextSelected: {
-    color: "#FFFFFF",
-  },
-  roomSelector: {
-    borderWidth: 1,
-    borderRadius: 12,
-    borderColor: "#D1D5DB",
-    padding: 12,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#F9FAFB",
-  },
-  roomSelectorText: {
-    flex: 1,
-    paddingRight: 10,
-  },
-  roomCode: {
-    fontWeight: "600",
-    color: "#111827",
-  },
-  roomName: {
-    marginTop: 2,
-    fontSize: 12,
-    color: "#6B7280",
-  },
-  chevron: {
-    fontSize: 18,
-    color: "#9CA3AF",
-  },
-  uploadButton: {
-    marginTop: 4,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#D1D5DB",
-    backgroundColor: "#F9FAFB",
-    alignItems: "center",
-  },
-  uploadButtonText: {
-    fontWeight: "600",
-    color: "#111827",
-  },
-  previewImage: {
-    width: "100%",
-    height: 200,
-    borderRadius: 12,
-    marginTop: 10,
-  },
-  textArea: {
-    minHeight: 110,
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: "#D1D5DB",
-    padding: 12,
-    textAlignVertical: "top",
-    backgroundColor: "#F9FAFB",
-    fontSize: 13,
-  },
-  evidenceStatus: {
-    marginTop: 6,
-    fontSize: 12,
-  },
-  evidenceOk: {
-    color: "#16A34A",
-  },
-  evidenceMissing: {
-    color: "#F97316",
-  },
-  submitButton: {
-    marginTop: 4,
-    paddingVertical: 14,
-    borderRadius: 999,
-    backgroundColor: "#1D4ED8",
-    alignItems: "center",
-  },
-  submitButtonDisabled: {
-    backgroundColor: "#93C5FD",
-  },
-  submitButtonText: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  modalBackdrop: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.25)",
-    justifyContent: "flex-end",
-  },
-  modalSheet: {
-    backgroundColor: "#FFFFFF",
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    padding: 14,
-    maxHeight: "75%",
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-  },
-  modalHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingBottom: 8,
-  },
-  modalTitle: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#111827",
-  },
-  modalClose: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#4B5563",
-  },
-  roomOption: {
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#E5E7EB",
-    marginBottom: 8,
-    backgroundColor: "#F9FAFB",
-  },
-  roomOptionCode: {
-    fontWeight: "700",
-    color: "#111827",
-  },
-  roomOptionName: {
-    marginTop: 2,
-    fontSize: 12,
-    color: "#6B7280",
-  },
-  locationBanner: {
-    borderRadius: 12,
-    padding: 10,
-    marginBottom: 8,
-  },
-  locationBannerTitle: {
-    fontSize: 13,
-    fontWeight: "700",
-    marginBottom: 2,
-  },
-  locationBannerText: {
-    fontSize: 12,
-    color: "#374151",
-    lineHeight: 16,
-  },
-});
