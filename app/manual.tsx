@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Image,
@@ -14,7 +14,7 @@ import { router, useFocusEffect } from "expo-router";
 import * as Location from "expo-location";
 
 import { insertReport } from "../src/db/db";
-import rawRoomsByFloor from "../scripts/e5_rooms.json";
+import rawRoomsByBuilding from "../src/data/rooms_by_building.json";
 import {
   BUILDINGS,
   E5_BUILDING,
@@ -32,6 +32,14 @@ type Room = {
   name: string;
 };
 
+type RoomsByBuilding = Record<
+  string,
+  {
+    buildingName: string;
+    floors: Record<string, Room[]>;
+  }
+>;
+
 type LocationStatusType =
   | "idle"
   | "loading"
@@ -40,6 +48,7 @@ type LocationStatusType =
   | "success";
 
 type MatchRelation = "inside" | "near" | "far" | "none-nearby";
+type BuildingSelectionSource = "none" | "auto" | "user";
 
 type LocationStatusState = {
   type: LocationStatusType;
@@ -51,20 +60,24 @@ type LocationStatusState = {
   e5DistanceMeters?: number;
   accuracyMeters?: number;
   coords?: LatLngPoint;
+  matchedBuildingSupported?: boolean;
+  suggestedBuildingId?: string;
+  suggestedBuildingName?: string;
 };
 
 type PositionResult =
   | { ok: true; coords: Location.LocationObjectCoords }
   | { ok: false; reason: "denied" | "error"; error?: unknown };
 
-const roomsByFloor: Record<string, Room[]> = rawRoomsByFloor;
-const BUILDING = "E5";
-const FLOORS = Object.keys(roomsByFloor).sort();
-
+const roomsByBuilding: RoomsByBuilding = rawRoomsByBuilding;
+const SUPPORTED_BUILDING_IDS = Object.keys(roomsByBuilding).sort();
 const NEAR_THRESHOLD_METERS = 20;
 const NONE_NEARBY_THRESHOLD_METERS = 100;
+const AUTO_SELECT_NEAR_THRESHOLD_METERS = 15;
+const AUTO_SELECT_MAX_ACCURACY_METERS = 40;
 const LOW_CONFIDENCE_ACCURACY_METERS = 50;
 const ENABLE_LOCATION_TIMING_LOG = true;
+const REFRESH_COOLDOWN_MS = 1000;
 
 function nowMs() {
   return Date.now();
@@ -74,6 +87,15 @@ function logTiming(label: string, startedAt: number) {
   if (!ENABLE_LOCATION_TIMING_LOG) return;
   const elapsed = Date.now() - startedAt;
   console.log(`[manual/location] ${label}: ${elapsed}ms`);
+}
+
+function getSupportedBuildingName(buildingId?: string) {
+  if (!buildingId) return undefined;
+  return roomsByBuilding[buildingId]?.buildingName ?? buildingId;
+}
+
+function isSupportedBuilding(buildingId?: string) {
+  return Boolean(buildingId && roomsByBuilding[buildingId]);
 }
 
 async function ensureLocationPermission(): Promise<
@@ -122,20 +144,23 @@ function buildLocationMessage(params: {
   relation: MatchRelation;
   matchedBuilding?: BuildingPolygon | null;
   matchedDistanceMeters?: number;
-  e5DistanceMeters: number;
+  e5DistanceMeters?: number;
   accuracyMeters?: number;
-}): string {
+  matchedBuildingSupported?: boolean;
+}) {
   const {
     relation,
     matchedBuilding,
     matchedDistanceMeters,
     e5DistanceMeters,
     accuracyMeters,
+    matchedBuildingSupported,
   } = params;
 
   const roundedMatchedDistance =
     matchedDistanceMeters != null ? Math.round(matchedDistanceMeters) : undefined;
-  const roundedE5Distance = Math.round(e5DistanceMeters);
+  const roundedE5Distance =
+    e5DistanceMeters != null ? Math.round(e5DistanceMeters) : undefined;
   const roundedAccuracy =
     accuracyMeters != null ? Math.round(accuracyMeters) : undefined;
 
@@ -150,26 +175,52 @@ function buildLocationMessage(params: {
     matchedBuilding &&
     roundedMatchedDistance != null
   ) {
-    headline = `You are about ${roundedMatchedDistance} m from ${matchedBuilding.name}.`;
+    headline = `Closest detected building: ${matchedBuilding.name} (${roundedMatchedDistance} m).`;
   } else {
-    headline = "You do not appear to be near any supported building.";
+    headline = "You do not appear to be near a supported pilot building.";
   }
 
-  let detail = `Distance to E5: ${roundedE5Distance} m`;
+  let detail = "";
+
+  if (matchedBuilding && !matchedBuildingSupported) {
+    detail =
+      "Detailed room data is currently available only for selected pilot buildings. Please choose one manually below.";
+  } else if (relation === "inside" && matchedBuildingSupported) {
+    detail = "This supported building can be auto-selected for room lookup.";
+  } else if (relation === "near" && matchedBuildingSupported) {
+    detail = "This supported building can be used as a suggested location. Please confirm it.";
+  } else if (relation === "none-nearby") {
+    detail =
+      "Please choose one of the supported pilot buildings manually.";
+  }
+
+  if (roundedE5Distance != null) {
+    const e5DistanceLabel =
+      roundedE5Distance >= 1000
+        ? `${(roundedE5Distance / 1000).toFixed(2)} km`
+        : `${roundedE5Distance} m`;
+
+    detail = detail
+      ? `${detail}\nYou are ${e5DistanceLabel} from E5.`
+      : `You are ${e5DistanceLabel} from E5.`;
+  }
 
   if (roundedAccuracy != null) {
-    detail += ` · GPS accuracy ±${roundedAccuracy} m`;
+    detail = detail
+      ? `${detail}\nGPS accuracy ±${roundedAccuracy} m`
+      : `GPS accuracy ±${roundedAccuracy} m`;
   }
 
-  let warning = "";
   if (
     roundedAccuracy != null &&
     roundedAccuracy > LOW_CONFIDENCE_ACCURACY_METERS
   ) {
-    warning = "\nLocation may be inaccurate.";
+    detail = detail
+      ? `${detail}\nLocation may be inaccurate.`
+      : "Location may be inaccurate.";
   }
 
-  return `${headline}\n${detail}${warning}`;
+  return detail ? `${headline}\n${detail}` : headline;
 }
 
 function buildLocationStatusFromCoords(
@@ -185,7 +236,6 @@ function buildLocationStatusFromCoords(
     BUILDINGS,
     NEAR_THRESHOLD_METERS
   );
-
   const e5Match = classifyPointAgainstBuilding(
     point,
     E5_BUILDING,
@@ -222,6 +272,11 @@ function buildLocationStatusFromCoords(
       relation = "far";
     }
 
+    const matchedBuildingSupported =
+      relation === "none-nearby"
+        ? false
+        : isSupportedBuilding(bestMatch.building.id);
+
     result = {
       type: "success",
       relation,
@@ -234,6 +289,15 @@ function buildLocationStatusFromCoords(
       e5DistanceMeters: e5Match.distanceMeters,
       accuracyMeters: accuracy ?? undefined,
       coords: point,
+      matchedBuildingSupported,
+      suggestedBuildingId:
+        relation !== "none-nearby" && matchedBuildingSupported
+          ? bestMatch.building.id
+          : undefined,
+      suggestedBuildingName:
+        relation !== "none-nearby" && matchedBuildingSupported
+          ? getSupportedBuildingName(bestMatch.building.id)
+          : undefined,
       message: buildLocationMessage({
         relation,
         matchedBuilding:
@@ -242,6 +306,7 @@ function buildLocationStatusFromCoords(
           relation === "none-nearby" ? undefined : bestMatch.distanceMeters,
         e5DistanceMeters: e5Match.distanceMeters,
         accuracyMeters: accuracy ?? undefined,
+        matchedBuildingSupported,
       }),
     };
   }
@@ -250,7 +315,39 @@ function buildLocationStatusFromCoords(
   return result;
 }
 
+function shouldAutoSelectBuilding(status: LocationStatusState) {
+  if (status.type !== "success") return false;
+  if (!status.suggestedBuildingId) return false;
+
+  const accuracyOk =
+    status.accuracyMeters == null ||
+    status.accuracyMeters <= AUTO_SELECT_MAX_ACCURACY_METERS;
+
+  if (!accuracyOk) return false;
+
+  if (status.relation === "inside") return true;
+
+  if (
+    status.relation === "near" &&
+    status.distanceMeters != null &&
+    status.distanceMeters <= AUTO_SELECT_NEAR_THRESHOLD_METERS
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
 export default function Manual() {
+  const backgroundCurrentUpdateActiveRef = useRef(false);
+  const lastManualRefreshAtRef = useRef(0);
+
+  const [selectedBuildingId, setSelectedBuildingId] = useState("");
+  const [buildingSelectionSource, setBuildingSelectionSource] =
+    useState<BuildingSelectionSource>("none");
+  const [buildingOpen, setBuildingOpen] = useState(false);
+  const [buildingQuery, setBuildingQuery] = useState("");
+
   const [floor, setFloor] = useState("");
   const [roomCode, setRoomCode] = useState("");
   const [roomName, setRoomName] = useState("");
@@ -268,6 +365,10 @@ export default function Manual() {
   const [isRefreshingLocation, setIsRefreshingLocation] = useState(false);
 
   const resetForm = useCallback(() => {
+    setSelectedBuildingId("");
+    setBuildingSelectionSource("none");
+    setBuildingOpen(false);
+    setBuildingQuery("");
     setFloor("");
     setRoomCode("");
     setRoomName("");
@@ -277,8 +378,30 @@ export default function Manual() {
     setRoomQuery("");
   }, []);
 
+  const applyBuildingSelection = useCallback(
+    (buildingId: string, source: BuildingSelectionSource) => {
+      setSelectedBuildingId((prev) => {
+        if (prev !== buildingId) {
+          setFloor("");
+          setRoomCode("");
+          setRoomName("");
+          setRoomQuery("");
+        }
+        return buildingId;
+      });
+      setBuildingSelectionSource(source);
+    },
+    []
+  );
+
   const refreshLocation = useCallback(async () => {
-    const totalStart = nowMs();
+    const now = nowMs();
+    if (now - lastManualRefreshAtRef.current < REFRESH_COOLDOWN_MS) {
+      return;
+    }
+    lastManualRefreshAtRef.current = now;
+
+    const visibleRefreshStart = nowMs();
     setIsRefreshingLocation(true);
 
     const permissionStart = nowMs();
@@ -290,17 +413,17 @@ export default function Manual() {
         setLocationStatus({
           type: "denied",
           message:
-            "Location permission was not granted. You can still select the room manually.",
+            "Location permission was not granted. You can still select a supported building manually.",
         });
       } else {
         setLocationStatus({
           type: "error",
           message:
-            "There was an error while checking location permission. You can still select the room manually.",
+            "There was an error while checking location permission. You can still select a supported building manually.",
         });
       }
       setIsRefreshingLocation(false);
-      logTiming("refreshLocation(total)", totalStart);
+      logTiming("refreshLocation(visible)", visibleRefreshStart);
       return;
     }
 
@@ -311,56 +434,84 @@ export default function Manual() {
       });
     }
 
-    try {
-      const lastKnownStart = nowMs();
-      const lastKnown = await getLastKnownPositionSafe();
-      logTiming("getLastKnownPositionSafe", lastKnownStart);
+    const lastKnownStart = nowMs();
+    const lastKnown = await getLastKnownPositionSafe();
+    logTiming("getLastKnownPositionSafe", lastKnownStart);
 
-      if (lastKnown.ok) {
-        const buildStart = nowMs();
-        const status = buildLocationStatusFromCoords(lastKnown.coords, "lastKnown");
-        logTiming("setLocationStatus(lastKnown/build only)", buildStart);
-        setLocationStatus(status);
-      } else if (locationStatus.type === "idle") {
-        setLocationStatus({
-          type: "loading",
-          message: "Trying to get your current location...",
-        });
-      }
-
-      const currentStart = nowMs();
-      const current = await getCurrentPositionSafe();
-      logTiming("getCurrentPositionSafe", currentStart);
-
-      if (current.ok) {
-        const buildStart = nowMs();
-        const status = buildLocationStatusFromCoords(current.coords, "current");
-        logTiming("setLocationStatus(current/build only)", buildStart);
-        setLocationStatus(status);
-      } else if (!lastKnown.ok) {
-        setLocationStatus({
-          type: "error",
-          message:
-            "There was an error while fetching your location. You can still select the room manually.",
-        });
-      }
-    } finally {
-      setIsRefreshingLocation(false);
-      logTiming("refreshLocation(total)", totalStart);
+    if (lastKnown.ok) {
+      const status = buildLocationStatusFromCoords(lastKnown.coords, "lastKnown");
+      setLocationStatus(status);
+    } else if (locationStatus.type === "idle") {
+      setLocationStatus({
+        type: "loading",
+        message: "Trying to get your current location...",
+      });
     }
+
+    setIsRefreshingLocation(false);
+    logTiming("refreshLocation(visible)", visibleRefreshStart);
+
+    if (backgroundCurrentUpdateActiveRef.current) {
+      return;
+    }
+
+    backgroundCurrentUpdateActiveRef.current = true;
+
+    void (async () => {
+      const backgroundStart = nowMs();
+      try {
+        const currentStart = nowMs();
+        const current = await getCurrentPositionSafe();
+        logTiming("getCurrentPositionSafe", currentStart);
+
+        if (current.ok) {
+          const status = buildLocationStatusFromCoords(current.coords, "current");
+          setLocationStatus(status);
+        } else if (!lastKnown.ok) {
+          setLocationStatus({
+            type: "error",
+            message:
+              "There was an error while fetching your location. You can still select a supported building manually.",
+          });
+        }
+      } finally {
+        backgroundCurrentUpdateActiveRef.current = false;
+        logTiming("refreshLocation(backgroundCurrent)", backgroundStart);
+      }
+    })();
   }, [locationStatus.type]);
+
+  useEffect(() => {
+    refreshLocation();
+  }, [refreshLocation]);
+
+  useEffect(() => {
+    if (buildingSelectionSource === "user") return;
+    if (!shouldAutoSelectBuilding(locationStatus)) return;
+    if (!locationStatus.suggestedBuildingId) return;
+
+    applyBuildingSelection(locationStatus.suggestedBuildingId, "auto");
+  }, [applyBuildingSelection, buildingSelectionSource, locationStatus]);
 
   useFocusEffect(
     useCallback(() => {
       resetForm();
-      refreshLocation();
-    }, [resetForm, refreshLocation])
+    }, [resetForm])
   );
 
+  const selectedBuilding = selectedBuildingId
+    ? roomsByBuilding[selectedBuildingId]
+    : undefined;
+
+  const floors = useMemo(() => {
+    if (!selectedBuildingId) return [];
+    return Object.keys(roomsByBuilding[selectedBuildingId]?.floors ?? {}).sort();
+  }, [selectedBuildingId]);
+
   const roomOptions = useMemo<Room[]>(() => {
-    if (!floor) return [];
-    return roomsByFloor[floor] ?? [];
-  }, [floor]);
+    if (!selectedBuildingId || !floor) return [];
+    return roomsByBuilding[selectedBuildingId]?.floors?.[floor] ?? [];
+  }, [selectedBuildingId, floor]);
 
   const filteredRoomOptions = useMemo<Room[]>(() => {
     const query = roomQuery.trim().toLowerCase();
@@ -374,8 +525,26 @@ export default function Manual() {
     });
   }, [roomOptions, roomQuery]);
 
+  const filteredBuildingOptions = useMemo(() => {
+    const query = buildingQuery.trim().toLowerCase();
+
+    return SUPPORTED_BUILDING_IDS.filter((buildingId) => {
+      const buildingName = getSupportedBuildingName(buildingId) ?? buildingId;
+      if (!query) return true;
+      return (
+        buildingId.toLowerCase().includes(query) ||
+        buildingName.toLowerCase().includes(query)
+      );
+    });
+  }, [buildingQuery]);
+
+  const selectedBuildingLabel = selectedBuilding
+    ? `${selectedBuildingId} · ${selectedBuilding.buildingName}`
+    : "Please select a supported building";
+
   const hasEvidence = Boolean(imageUri) || description.trim().length > 0;
-  const canSubmit = Boolean(floor) && Boolean(roomCode) && hasEvidence;
+  const canSubmit =
+    Boolean(selectedBuildingId) && Boolean(floor) && Boolean(roomCode) && hasEvidence;
 
   async function pickImage() {
     const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -399,13 +568,13 @@ export default function Manual() {
     if (!canSubmit) {
       Alert.alert(
         "Incomplete report",
-        "Please select a location and provide a photo or description."
+        "Please select a building, floor, room, and provide a photo or description."
       );
       return;
     }
 
     await insertReport({
-      building: BUILDING,
+      building: selectedBuildingId,
       floor,
       roomCode,
       roomName,
@@ -419,6 +588,11 @@ export default function Manual() {
   }
 
   function openRoomPicker() {
+    if (!selectedBuildingId) {
+      Alert.alert("Select building first", "Please select a supported building first.");
+      return;
+    }
+
     if (!floor) {
       Alert.alert("Select floor first", "Please select a floor first.");
       return;
@@ -432,6 +606,12 @@ export default function Manual() {
     setRoomName(room.name);
     setRoomOpen(false);
     setRoomQuery("");
+  }
+
+  function selectBuilding(buildingId: string) {
+    applyBuildingSelection(buildingId, "user");
+    setBuildingOpen(false);
+    setBuildingQuery("");
   }
 
   function renderLocationBanner() {
@@ -454,16 +634,22 @@ export default function Manual() {
       color = "#DC2626";
       bg = "#FEE2E2";
     } else if (locationStatus.type === "success") {
-      if (locationStatus.relation === "inside") {
-        title = `Inside ${locationStatus.matchedBuildingName ?? "building"}`;
+      if (
+        locationStatus.relation === "inside" &&
+        locationStatus.matchedBuildingSupported
+      ) {
+        title = `Inside supported building: ${locationStatus.suggestedBuildingId ?? locationStatus.matchedBuildingId}`;
         color = "#16A34A";
         bg = "#DCFCE7";
-      } else if (locationStatus.relation === "near") {
-        title = `Near ${locationStatus.matchedBuildingName ?? "building"}`;
+      } else if (
+        locationStatus.relation === "near" &&
+        locationStatus.matchedBuildingSupported
+      ) {
+        title = `Near supported building: ${locationStatus.suggestedBuildingId ?? locationStatus.matchedBuildingId}`;
         color = "#F97316";
         bg = "#FFEDD5";
-      } else if (locationStatus.relation === "far") {
-        title = `Closest: ${locationStatus.matchedBuildingName ?? "building"}`;
+      } else if (locationStatus.matchedBuildingName) {
+        title = `Detected building: ${locationStatus.matchedBuildingName}`;
         color = "#6B7280";
         bg = "#E5E7EB";
       } else {
@@ -474,7 +660,7 @@ export default function Manual() {
     }
 
     return (
-      <View style={[styles.locationBanner, { backgroundColor: bg }]}> 
+      <View style={[styles.locationBanner, { backgroundColor: bg }]}>
         <View style={styles.locationBannerHeader}>
           <Text style={[styles.locationBannerTitle, { color }]}>{title}</Text>
 
@@ -505,8 +691,7 @@ export default function Manual() {
         <View style={styles.header}>
           <Text style={styles.title}>Manual fault report</Text>
           <Text style={styles.subtitle}>
-            Provide the exact location in E5 and at least one piece of evidence
-            so the issue can be followed up efficiently.
+            Use location to suggest a pilot building, then confirm the exact floor and room with minimal input.
           </Text>
         </View>
 
@@ -514,7 +699,24 @@ export default function Manual() {
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Location</Text>
-          <Text style={styles.sectionHint}>Building is fixed to E5 for now.</Text>
+          <Text style={styles.sectionHint}>
+            Detailed room selection is currently available only for supported pilot buildings.
+          </Text>
+
+          <Text style={styles.fieldLabel}>Building</Text>
+          <Pressable onPress={() => setBuildingOpen(true)} style={styles.roomSelector}>
+            <View style={styles.roomSelectorText}>
+              <Text style={styles.roomCode}>{selectedBuildingLabel}</Text>
+              {buildingSelectionSource !== "none" ? (
+                <Text style={styles.roomName}>
+                  {buildingSelectionSource === "auto"
+                    ? "Auto-selected from your location"
+                    : "Selected manually"}
+                </Text>
+              ) : null}
+            </View>
+            <Text style={styles.chevron}>▼</Text>
+          </Pressable>
 
           <Text style={styles.fieldLabel}>Floor</Text>
           <ScrollView
@@ -522,34 +724,38 @@ export default function Manual() {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.floorList}
           >
-            {FLOORS.map((f) => {
-              const selected = floor === f;
+            {floors.length === 0 ? (
+              <Text style={styles.sectionHint}>Select a supported building first.</Text>
+            ) : (
+              floors.map((f) => {
+                const selected = floor === f;
 
-              return (
-                <Pressable
-                  key={f}
-                  onPress={() => {
-                    setFloor(f);
-                    setRoomCode("");
-                    setRoomName("");
-                    setRoomQuery("");
-                  }}
-                  style={[
-                    styles.floorChip,
-                    selected && styles.floorChipSelected,
-                  ]}
-                >
-                  <Text
+                return (
+                  <Pressable
+                    key={f}
+                    onPress={() => {
+                      setFloor(f);
+                      setRoomCode("");
+                      setRoomName("");
+                      setRoomQuery("");
+                    }}
                     style={[
-                      styles.floorChipText,
-                      selected && styles.floorChipTextSelected,
+                      styles.floorChip,
+                      selected && styles.floorChipSelected,
                     ]}
                   >
-                    Level {f}
-                  </Text>
-                </Pressable>
-              );
-            })}
+                    <Text
+                      style={[
+                        styles.floorChipText,
+                        selected && styles.floorChipTextSelected,
+                      ]}
+                    >
+                      Level {f}
+                    </Text>
+                  </Pressable>
+                );
+              })
+            )}
           </ScrollView>
 
           <Text style={styles.fieldLabel}>Room</Text>
@@ -567,8 +773,7 @@ export default function Manual() {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Fault details</Text>
           <Text style={styles.sectionHint}>
-            At least one of the following is required: a photo or a written
-            description.
+            At least one of the following is required: a photo or a written description.
           </Text>
 
           <Pressable onPress={pickImage} style={styles.uploadButton}>
@@ -615,6 +820,63 @@ export default function Manual() {
       </ScrollView>
 
       <Modal
+        visible={buildingOpen}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setBuildingOpen(false)}
+      >
+        <Pressable
+          onPress={() => {
+            setBuildingOpen(false);
+            setBuildingQuery("");
+          }}
+          style={styles.modalBackdrop}
+        >
+          <Pressable onPress={() => {}} style={styles.modalSheet}>
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalTitle}>Select a supported building</Text>
+              <Pressable
+                onPress={() => {
+                  setBuildingOpen(false);
+                  setBuildingQuery("");
+                }}
+              >
+                <Text style={styles.modalClose}>Close</Text>
+              </Pressable>
+            </View>
+
+            <TextInput
+              value={buildingQuery}
+              onChangeText={setBuildingQuery}
+              placeholder="Search building code or name..."
+              style={styles.searchInput}
+            />
+
+            <ScrollView>
+              {filteredBuildingOptions.length === 0 ? (
+                <Text style={styles.emptySearchText}>
+                  No matching supported buildings found.
+                </Text>
+              ) : (
+                filteredBuildingOptions.map((buildingId) => (
+                  <Pressable
+                    key={buildingId}
+                    onPress={() => selectBuilding(buildingId)}
+                    style={styles.roomOption}
+                  >
+                    <Text style={styles.roomOptionCode}>{buildingId}</Text>
+                    <Text style={styles.roomOptionName}>
+                      {getSupportedBuildingName(buildingId)}
+                    </Text>
+                  </Pressable>
+                ))
+              )}
+            </ScrollView>
+          </Pressable>
+        </Pressable>
+      </Modal>
+
+      <Modal
         visible={roomOpen}
         transparent
         animationType="slide"
@@ -630,7 +892,7 @@ export default function Manual() {
           <Pressable onPress={() => {}} style={styles.modalSheet}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>
-                Select a room (Level {floor || "—"})
+                Select a room ({selectedBuildingId || "—"} · Level {floor || "—"})
               </Text>
               <Pressable
                 onPress={() => {

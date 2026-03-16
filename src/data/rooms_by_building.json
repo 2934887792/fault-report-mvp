@@ -1,0 +1,4929 @@
+{
+  "BIZ2": {
+    "buildingName": "BUSINESS BLOCK 2",
+    "floors": {
+      "01": [
+        {
+          "code": "BIZ2-01-01",
+          "name": "PHD STUDENT ROOM"
+        },
+        {
+          "code": "BIZ2-01-02",
+          "name": "OFFICE (P/T TUTORS)"
+        },
+        {
+          "code": "BIZ2-01-03",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-04",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-05",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-06",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-07",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-08",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-01-09",
+          "name": "OFFICE (DEPT RA's)"
+        },
+        {
+          "code": "BIZ2-01-10",
+          "name": "OFFICE (DEPT RA's)"
+        },
+        {
+          "code": "BIZ2-01-11",
+          "name": "SEMINAR ROOM 1-11"
+        },
+        {
+          "code": "BIZ2-01-12",
+          "name": "SEMINAR ROOM 1-12"
+        },
+        {
+          "code": "BIZ2-01-13",
+          "name": "OFFICE (P/T TUTORS )"
+        },
+        {
+          "code": "BIZ2-01-14",
+          "name": "SEMINAR ROOM 1-14"
+        },
+        {
+          "code": "BIZ2-01-15",
+          "name": "SEMINAR ROOM 1-15"
+        },
+        {
+          "code": "BIZ2-01-16",
+          "name": "SEMINAR ROOM 1-16"
+        },
+        {
+          "code": "BIZ2-01-17",
+          "name": "SEMINAR ROOM 1-17"
+        },
+        {
+          "code": "BIZ2-01-18",
+          "name": "SEMINAR ROOM 1-18"
+        },
+        {
+          "code": "BIZ2-01-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-01-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "BIZ2-01-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "BIZ2-01-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-01-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-01-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-01-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-01-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-01-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-01-INTCOR",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-01-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "BIZ2-01-LIFTPIT",
+          "name": "LIFT PIT"
+        },
+        {
+          "code": "BIZ2-01-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-01-PANTRY",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-01-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-01-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-01-SERV3",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-01-SERV4",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-01-SSLOB1",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-01-SSLOB2",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-01-STAIR",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-01-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-01-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-01-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "02": [
+        {
+          "code": "BIZ2-02-01",
+          "name": "SEMINAR ROOM 2-1"
+        },
+        {
+          "code": "BIZ2-02-02",
+          "name": "SEMINAR ROOM 2-2"
+        },
+        {
+          "code": "BIZ2-02-03",
+          "name": "OFFICE (P/T TUTORS ROOM)"
+        },
+        {
+          "code": "BIZ2-02-04",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-02-05",
+          "name": "HONOURS & BETA GAMMA SIGMA STUDENT'S LOUNGE"
+        },
+        {
+          "code": "BIZ2-02-06",
+          "name": "CFA STUDENTS' INTEREST GROUP"
+        },
+        {
+          "code": "BIZ2-02-07",
+          "name": "CASE CONSULTING CLUB"
+        },
+        {
+          "code": "BIZ2-02-08",
+          "name": "THE MASTERS CLUB"
+        },
+        {
+          "code": "BIZ2-02-09",
+          "name": "OFFICE (P/T TUTORS ROOM)"
+        },
+        {
+          "code": "BIZ2-02-10",
+          "name": "OFFICE (P/T TUTORS ROOM)"
+        },
+        {
+          "code": "BIZ2-02-11",
+          "name": "OFFICE (P/T TUTORS ROOM)"
+        },
+        {
+          "code": "BIZ2-02-12",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-13",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-14",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-15",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-16",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-17",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-18",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-19",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-20",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-21",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-22",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-02-23",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-02-24",
+          "name": "SEMINAR ROOM 2-24"
+        },
+        {
+          "code": "BIZ2-02-25",
+          "name": "OFFICE (P/T TUTORS ROOM)"
+        },
+        {
+          "code": "BIZ2-02-26",
+          "name": "SEMINAR ROOM 2-26"
+        },
+        {
+          "code": "BIZ2-02-27",
+          "name": "SEMINAR ROOM 2-27"
+        },
+        {
+          "code": "BIZ2-02-28",
+          "name": "SEMINAR ROOM 2-28"
+        },
+        {
+          "code": "BIZ2-02-29",
+          "name": "SEMINAR ROOM 2-29"
+        },
+        {
+          "code": "BIZ2-02-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-02-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "BIZ2-02-ELECT1",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-02-ELECT2",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-02-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-02-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-02-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-02-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-02-FOYER1",
+          "name": "FOYER"
+        },
+        {
+          "code": "BIZ2-02-FOYER2",
+          "name": "FOYER"
+        },
+        {
+          "code": "BIZ2-02-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-02-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-02-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-02-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-02-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-02-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "BIZ2-02-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-02-SERV",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-02-SSLOB1",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-02-SSLOB2",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-02-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-02-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-02-STAIR6",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-02-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "03": [
+        {
+          "code": "BIZ2-03-01",
+          "name": "SEMINAR ROOM 3-1"
+        },
+        {
+          "code": "BIZ2-03-02",
+          "name": "SEMINAR ROOM 3-2"
+        },
+        {
+          "code": "BIZ2-03-03",
+          "name": "SEMINAR ROOM 3-3"
+        },
+        {
+          "code": "BIZ2-03-04",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-05",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-06",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-07",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-08",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-09",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-10",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-11",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-12",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-13",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-14",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-15",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-16",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-17",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-18",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-19",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-20",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-21",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-22",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-23",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-24",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-25",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-26",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-27",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-28",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-29",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-30",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-31",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-32",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-33",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-34",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-35",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-36",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-37",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-38",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-39",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-40",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-41",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-42",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-43",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-43A",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-45",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-46",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-47",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-48",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-49",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-03-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-03-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-03-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "BIZ2-03-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "BIZ2-03-ELECT1",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-03-ELECT2",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-03-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-03-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-03-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-03-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-03-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-03-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-03-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-03-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-INTCOR3",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "BIZ2-03-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-03-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-03-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SERV3",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SERV4",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SERV5",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SERV6",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-03-SSLOB1",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-03-SSLOB2",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-03-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-03-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-03-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-03-STAIR6",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-03-STORE2",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-03-STORE3",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-03-STORE4",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-03-TASR1",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "BIZ2-03-TASR2",
+          "name": "TAS RISER"
+        }
+      ],
+      "04": [
+        {
+          "code": "BIZ2-04-01",
+          "name": "BIZAD CLUB"
+        },
+        {
+          "code": "BIZ2-04-01A",
+          "name": "BIZAD CLUB"
+        },
+        {
+          "code": "BIZ2-04-01B",
+          "name": "SEMINAR ROOM 4-1B"
+        },
+        {
+          "code": "BIZ2-04-01C",
+          "name": "SEMINAR ROOM @ LT19"
+        },
+        {
+          "code": "BIZ2-04-02/03",
+          "name": "BAC GENERAL OFFICE"
+        },
+        {
+          "code": "BIZ2-04-04",
+          "name": "SEMINAR ROOM 4-4"
+        },
+        {
+          "code": "BIZ2-04-05",
+          "name": "ABFER & CGS OFFICE"
+        },
+        {
+          "code": "BIZ2-04-05A",
+          "name": "MEETING ROOM 4-5A"
+        },
+        {
+          "code": "BIZ2-04-05B",
+          "name": "CGS"
+        },
+        {
+          "code": "BIZ2-04-05C",
+          "name": "ABFER"
+        },
+        {
+          "code": "BIZ2-04-05D",
+          "name": "ASSOC DIRECTOR, ABFER"
+        },
+        {
+          "code": "BIZ2-04-05E",
+          "name": "CGS"
+        },
+        {
+          "code": "BIZ2-04-05F",
+          "name": "CGS"
+        },
+        {
+          "code": "BIZ2-04-05G",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-04-05H",
+          "name": "WORK ROOM"
+        },
+        {
+          "code": "BIZ2-04-05I*",
+          "name": "CGS OFFICE"
+        },
+        {
+          "code": "BIZ2-04-06",
+          "name": "EXPERIMENT LAB 4-6"
+        },
+        {
+          "code": "BIZ2-04-06A",
+          "name": "EXPERIMENT LAB 4-6A"
+        },
+        {
+          "code": "BIZ2-04-06B",
+          "name": "EXPERIMENT LAB 4-6B"
+        },
+        {
+          "code": "BIZ2-04-06C",
+          "name": "EXPERIMENT LAB 4-6C"
+        },
+        {
+          "code": "BIZ2-04-06D",
+          "name": "EXPERIMENT LAB 4-6D"
+        },
+        {
+          "code": "BIZ2-04-06E",
+          "name": "EXPERIMENT LAB 4-6E"
+        },
+        {
+          "code": "BIZ2-04-06F",
+          "name": "EXPERIMENT LAB 4-6F"
+        },
+        {
+          "code": "BIZ2-04-07",
+          "name": "EXPERIMENT LAB 4-7"
+        },
+        {
+          "code": "BIZ2-04-08",
+          "name": "BEHAVIOURAL LAB 4-8"
+        },
+        {
+          "code": "BIZ2-04-09",
+          "name": "OBSERVATION ROOM 4-9"
+        },
+        {
+          "code": "BIZ2-04-10",
+          "name": "OBSERVATION ROOM 4-10"
+        },
+        {
+          "code": "BIZ2-04-11",
+          "name": "BEHAVIOURAL LAB 4-11"
+        },
+        {
+          "code": "BIZ2-04-12",
+          "name": "AV WORKROOM"
+        },
+        {
+          "code": "BIZ2-04-13",
+          "name": "FUNCTION ROOM 4-13"
+        },
+        {
+          "code": "BIZ2-04-13A",
+          "name": "SEMINAR ROOM 4-13A"
+        },
+        {
+          "code": "BIZ2-04-13B",
+          "name": "SEMINAR ROOM 4-13B"
+        },
+        {
+          "code": "BIZ2-04-13C",
+          "name": "SEMINAR ROOM 4-13C"
+        },
+        {
+          "code": "BIZ2-04-14",
+          "name": "MULTIMEDIA UNIT"
+        },
+        {
+          "code": "BIZ2-04-15",
+          "name": "BREAKOUT ROOM 4-15"
+        },
+        {
+          "code": "BIZ2-04-16",
+          "name": "BREAKOUT ROOM 4-16"
+        },
+        {
+          "code": "BIZ2-04-17",
+          "name": "BREAKOUT ROOM 4-17"
+        },
+        {
+          "code": "BIZ2-04-18",
+          "name": "IT OPERATIONS STORE"
+        },
+        {
+          "code": "BIZ2-04-19",
+          "name": "AV EQUIPMENT ROOM"
+        },
+        {
+          "code": "BIZ2-04-20",
+          "name": "SEMINAR ROOM 4-20"
+        },
+        {
+          "code": "BIZ2-04-21",
+          "name": "AV MAINTENANCE ROOM"
+        },
+        {
+          "code": "BIZ2-04-22",
+          "name": "SEMINAR ROOM 4-22"
+        },
+        {
+          "code": "BIZ2-04-23",
+          "name": "IT OPERATION ROOM"
+        },
+        {
+          "code": "BIZ2-04-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-04-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "BIZ2-04-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "BIZ2-04-ELECT1",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-04-ELECT2",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-04-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-04-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-04-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-04-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-EXTCOR3",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-EXTCOR4",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-04-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-04-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-04-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "BIZ2-04-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-04-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-04-PANTRY",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-04-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-04-SSLOB2",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-04-STAIR",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-04-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-04-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-04-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-04-STAIR6",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-04-TASR1",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "BIZ2-04-TASR2",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "BIZ2-04-TASR3",
+          "name": "TAS RISER"
+        }
+      ],
+      "05": [
+        {
+          "code": "BIZ2-05-01",
+          "name": "INTERACTIVE AREA FOR STAFF"
+        },
+        {
+          "code": "BIZ2-05-01A",
+          "name": "BBA Hot Desk"
+        },
+        {
+          "code": "BIZ2-05-01A/B",
+          "name": "STAFF LOUNGE"
+        },
+        {
+          "code": "BIZ2-05-01B",
+          "name": "BBA Hot Desk"
+        },
+        {
+          "code": "BIZ2-05-02",
+          "name": "WORKROOM (PRINT)"
+        },
+        {
+          "code": "BIZ2-05-02A",
+          "name": "COMPACTUS ROOM"
+        },
+        {
+          "code": "BIZ2-05-02B",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-05-03",
+          "name": "SGFI STAFF"
+        },
+        {
+          "code": "BIZ2-05-04",
+          "name": "MEETING ROOM 5-4"
+        },
+        {
+          "code": "BIZ2-05-05",
+          "name": "MEETING ROOM 5-5"
+        },
+        {
+          "code": "BIZ2-05-06",
+          "name": "DIRECTOR, BBA"
+        },
+        {
+          "code": "BIZ2-05-06*",
+          "name": "GENERAL OFFICE (BBA PROGRAM)"
+        },
+        {
+          "code": "BIZ2-05-07",
+          "name": "BBA OFFICE"
+        },
+        {
+          "code": "BIZ2-05-08",
+          "name": "BAC OFFICE"
+        },
+        {
+          "code": "BIZ2-05-08A",
+          "name": "BAC OFFICE"
+        },
+        {
+          "code": "BIZ2-05-09",
+          "name": "SEMINAR ROOM 5-9"
+        },
+        {
+          "code": "BIZ2-05-10",
+          "name": "SEMINAR ROOM 5-10"
+        },
+        {
+          "code": "BIZ2-05-11",
+          "name": "SEMINAR ROOM 5-11"
+        },
+        {
+          "code": "BIZ2-05-12",
+          "name": "STORE"
+        },
+        {
+          "code": "BIZ2-05-13",
+          "name": "HR OFFICE"
+        },
+        {
+          "code": "BIZ2-05-14",
+          "name": "SENIOR ASSOC DIRECTOR, BBA"
+        },
+        {
+          "code": "BIZ2-05-15",
+          "name": "VICE  DEAN, BBA"
+        },
+        {
+          "code": "BIZ2-05-16",
+          "name": "BBA STUDENT LOUNGE"
+        },
+        {
+          "code": "BIZ2-05-16A",
+          "name": "FUNCTION ROOM/STUDENT STUDY ROOM"
+        },
+        {
+          "code": "BIZ2-05-16B",
+          "name": "STUDENT CLUB"
+        },
+        {
+          "code": "BIZ2-05-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-05-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-05-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-05-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-05-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-05-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-05-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-05-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-05-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-05-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-05-INTCOR*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-INTCOR3",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-INTCOR4",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-LEDGE",
+          "name": "LEDGE"
+        },
+        {
+          "code": "BIZ2-05-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "BIZ2-05-LIFTM",
+          "name": "LIFT MOTOR ROOM"
+        },
+        {
+          "code": "BIZ2-05-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-05-PANTRY1",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-05-RECEPTION",
+          "name": "RECEPTION AREA"
+        },
+        {
+          "code": "BIZ2-05-ROOF",
+          "name": "RC FLAT ROOF"
+        },
+        {
+          "code": "BIZ2-05-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-SERV3",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-05-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "BIZ2-05-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-05-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-05-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-05-TASR1",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "BIZ2-05-TASR2",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "BIZ2-05-UNKNOWN",
+          "name": "UNKNOWN"
+        },
+        {
+          "code": "BIZ2-05-UNKNOWN1",
+          "name": "UNKNOWN"
+        }
+      ],
+      "06": [
+        {
+          "code": "BIZ2-06-01",
+          "name": "IT UNIT OFFICE"
+        },
+        {
+          "code": "BIZ2-06-01A",
+          "name": "OFFICE (IT UNIT)"
+        },
+        {
+          "code": "BIZ2-06-01B",
+          "name": "OFFICE (IT UNIT)"
+        },
+        {
+          "code": "BIZ2-06-01C",
+          "name": "SNR ASSOC DIRECTOR, IT"
+        },
+        {
+          "code": "BIZ2-06-02",
+          "name": "COMPACTORS"
+        },
+        {
+          "code": "BIZ2-06-03",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-06-04",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-06-05",
+          "name": "MEETING ROOM 6-5"
+        },
+        {
+          "code": "BIZ2-06-06",
+          "name": "MEETING ROOM 6-6"
+        },
+        {
+          "code": "BIZ2-06-07",
+          "name": "OFFICE"
+        },
+        {
+          "code": "BIZ2-06-08",
+          "name": "DIRECTOR(FINANCE & COMPLIANCE)"
+        },
+        {
+          "code": "BIZ2-06-08*",
+          "name": "GENERAL OFFICE (FINANCE)"
+        },
+        {
+          "code": "BIZ2-06-09*",
+          "name": "GENERAL OFFICE (FACILITIES / IT)"
+        },
+        {
+          "code": "BIZ2-06-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "BIZ2-06-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "BIZ2-06-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-06-ELECTR",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "BIZ2-06-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-06-HR",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-06-INTCOR",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-06-LEDGE",
+          "name": "LEDGE"
+        },
+        {
+          "code": "BIZ2-06-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-06-PANTRY",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-06-RECEPTION",
+          "name": "RECEPTION AREA"
+        },
+        {
+          "code": "BIZ2-06-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-06-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "BIZ2-06-STAIR",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-06-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-06-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "B1": [
+        {
+          "code": "BIZ2-B1-01",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-B1-02",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-B1-03",
+          "name": "PHD STUDENTS ROOM"
+        },
+        {
+          "code": "BIZ2-B1-04",
+          "name": "SEMINAR ROOM B1-4"
+        },
+        {
+          "code": "BIZ2-B1-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-B1-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-B1-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-B1-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-B1-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-B1-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-B1-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "BIZ2-B1-STORE1",
+          "name": "STORE PHD OFFICE"
+        },
+        {
+          "code": "BIZ2-B1-STORE2",
+          "name": "STORE"
+        }
+      ],
+      "B2": [
+        {
+          "code": "BIZ2-B2-02",
+          "name": "MEETING ROOM B2-02"
+        },
+        {
+          "code": "BIZ2-B2-02A",
+          "name": "PhD OFFICE STORE"
+        },
+        {
+          "code": "BIZ2-B2-03",
+          "name": "PHD RESEARCH OFFICE"
+        },
+        {
+          "code": "BIZ2-B2-03A",
+          "name": "DEPUTY DIRECTOR, PHD RESEARCH"
+        },
+        {
+          "code": "BIZ2-B2-04",
+          "name": "BIZ STORE"
+        },
+        {
+          "code": "BIZ2-B2-ELECT1",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-B2-ELECT2",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-B2-ELECT3",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "BIZ2-B2-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-B2-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "BIZ2-B2-FOYER",
+          "name": "FOYER"
+        },
+        {
+          "code": "BIZ2-B2-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-B2-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "BIZ2-B2-INTCOR",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "BIZ2-B2-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "BIZ2-B2-OSS",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "BIZ2-B2-PANTRY*",
+          "name": "PANTRY"
+        },
+        {
+          "code": "BIZ2-B2-STAIR1",
+          "name": "STAIRICASE"
+        },
+        {
+          "code": "BIZ2-B2-STAIR2",
+          "name": "STAIRCASE"
+        }
+      ],
+      "R1": [
+        {
+          "code": "BIZ2-R1-STAIR3",
+          "name": "STAIRCASE"
+        }
+      ]
+    }
+  },
+  "E5": {
+    "buildingName": "E5",
+    "floors": {
+      "01": [
+        {
+          "code": "E5-01-01",
+          "name": "RESEARCH STAFF/ STUDENT ROOM"
+        },
+        {
+          "code": "E5-01-02",
+          "name": "RESEARCH COMPUTING LAB (VACANT)"
+        },
+        {
+          "code": "E5-01-03",
+          "name": "OFFICE CIRCULATION"
+        },
+        {
+          "code": "E5-01-03A",
+          "name": "SERVER ROOM"
+        },
+        {
+          "code": "E5-01-03B",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-01-04",
+          "name": "COLD ROOM"
+        },
+        {
+          "code": "E5-01-05",
+          "name": "LIQUID NITROGEN ROOM"
+        },
+        {
+          "code": "E5-01-07",
+          "name": "INTERNAL CIRCULATION"
+        },
+        {
+          "code": "E5-01-08",
+          "name": "FLAMMABLE LIQUID STORE"
+        },
+        {
+          "code": "E5-01-09",
+          "name": "SECURITY ROOM"
+        },
+        {
+          "code": "E5-01-09A",
+          "name": "BCP ROOM"
+        },
+        {
+          "code": "E5-01-10*",
+          "name": "SITE EM OFFICE B"
+        },
+        {
+          "code": "E5-01-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-01-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-01-COMPRES1",
+          "name": "AIR COMPRESSOR ROOM"
+        },
+        {
+          "code": "E5-01-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-CWPR3",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-CWPR4",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-CWPR5",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-CWPR6",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-01-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "E5-01-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-01-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-01-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-01-FCC",
+          "name": "FIRE COMMAND CENTRE"
+        },
+        {
+          "code": "E5-01-GAS2",
+          "name": "GAS 2"
+        },
+        {
+          "code": "E5-01-GAS3",
+          "name": "GAS CYLINDER ROOM"
+        },
+        {
+          "code": "E5-01-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "E5-01-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "E5-01-OSS1",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "E5-01-OSS2",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "E5-01-OSS3",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "E5-01-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-01-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-01-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-01-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-01-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-01-STORE1",
+          "name": "STORE"
+        },
+        {
+          "code": "E5-01-STORE2",
+          "name": "STORE"
+        },
+        {
+          "code": "E5-01-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "E5-01-TELR2",
+          "name": "TELECOMM RISER"
+        }
+      ],
+      "02": [
+        {
+          "code": "E5-02-01",
+          "name": "PROFESSIONAL OFFICERS"
+        },
+        {
+          "code": "E5-02-02",
+          "name": "UTILITY / STORE ROOM"
+        },
+        {
+          "code": "E5-02-03",
+          "name": "STUDENT DISCUSSION ROOM I/EXAM PROCESSING ROOM"
+        },
+        {
+          "code": "E5-02-04",
+          "name": "STUDENT DISCUSSION ROOM II"
+        },
+        {
+          "code": "E5-02-05",
+          "name": "SERVER ROOM"
+        },
+        {
+          "code": "E5-02-06",
+          "name": "CHBE CONFERENCE ROOM"
+        },
+        {
+          "code": "E5-02-07",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-08",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-09",
+          "name": "GENERAL OFFICE (DEPT OF CHEMICAL & BIOMOLECULAR ENGINEERING"
+        },
+        {
+          "code": "E5-02-10",
+          "name": "OFFICE CIRCULATION"
+        },
+        {
+          "code": "E5-02-10A",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-02-10B",
+          "name": "COMMITTEE WORKING ROOM"
+        },
+        {
+          "code": "E5-02-10C",
+          "name": "PANTRY"
+        },
+        {
+          "code": "E5-02-10D",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-02-10E",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-02-11",
+          "name": "ChBE OFFICE"
+        },
+        {
+          "code": "E5-02-11A",
+          "name": "SECRETARY OFFICE"
+        },
+        {
+          "code": "E5-02-11B",
+          "name": "HEAD OF DEPT"
+        },
+        {
+          "code": "E5-02-11C",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-02-12",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-13",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-14",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-15",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-16",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-17",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-18",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-19",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-20",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-21",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-22",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-23",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-24",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-25",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-26",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-27",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-28",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-29",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-30",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-31",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-32",
+          "name": "EXECUTIVE SEMINAR ROOM"
+        },
+        {
+          "code": "E5-02-33",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-34",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-35",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-36",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-37",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-38",
+          "name": "STAFF ROOM"
+        },
+        {
+          "code": "E5-02-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-02-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-02-CWPR",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-02-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-02-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-02-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-02-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "E5-02-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "E5-02-INTCOR",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-02-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "E5-02-SERV1",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "E5-02-SERV2",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "E5-02-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-02-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-02-STORE",
+          "name": "UTILITY RM"
+        },
+        {
+          "code": "E5-02-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "E5-02-TELR2",
+          "name": "TELECOMM RISER"
+        }
+      ],
+      "03": [
+        {
+          "code": "E5-03-01",
+          "name": "STAFF ROOM 18"
+        },
+        {
+          "code": "E5-03-02",
+          "name": "STAFF ROOM 17"
+        },
+        {
+          "code": "E5-03-03",
+          "name": "STAFF ROOM 16"
+        },
+        {
+          "code": "E5-03-04",
+          "name": "STAFF ROOM 15"
+        },
+        {
+          "code": "E5-03-05",
+          "name": "STAFF ROOM 14"
+        },
+        {
+          "code": "E5-03-06",
+          "name": "STAFF ROOM 13"
+        },
+        {
+          "code": "E5-03-07",
+          "name": "STAFF ROOM 12"
+        },
+        {
+          "code": "E5-03-08",
+          "name": "STAFF ROOM 11"
+        },
+        {
+          "code": "E5-03-09",
+          "name": "STAFF ROOM 10"
+        },
+        {
+          "code": "E5-03-10",
+          "name": "STAFF ROOM 9"
+        },
+        {
+          "code": "E5-03-11",
+          "name": "STAFF ROOM 8"
+        },
+        {
+          "code": "E5-03-12",
+          "name": "STAFF ROOM 7"
+        },
+        {
+          "code": "E5-03-13",
+          "name": "STAFF ROOM 6"
+        },
+        {
+          "code": "E5-03-14",
+          "name": "STAFF ROOM 5"
+        },
+        {
+          "code": "E5-03-15",
+          "name": "STAFF ROOM 4"
+        },
+        {
+          "code": "E5-03-16",
+          "name": "STAFF ROOM 3"
+        },
+        {
+          "code": "E5-03-17",
+          "name": "STAFF ROOM 2"
+        },
+        {
+          "code": "E5-03-18",
+          "name": "STAFF ROOM 1"
+        },
+        {
+          "code": "E5-03-19",
+          "name": "SEMINAR ROOM (ACTIVE LEARNING ROOM)"
+        },
+        {
+          "code": "E5-03-20",
+          "name": "SEMINAR ROOM"
+        },
+        {
+          "code": "E5-03-21",
+          "name": "SEMINAR ROOM"
+        },
+        {
+          "code": "E5-03-22",
+          "name": "SEMINAR ROOM"
+        },
+        {
+          "code": "E5-03-23",
+          "name": "SEMINAR ROOM"
+        },
+        {
+          "code": "E5-03-24",
+          "name": "COMPUTER TEACHING LAB 1"
+        },
+        {
+          "code": "E5-03-25",
+          "name": "RESEARCH COMPUTATION LAB 1"
+        },
+        {
+          "code": "E5-03-26",
+          "name": "GENERAL STORE"
+        },
+        {
+          "code": "E5-03-27",
+          "name": "STORE ANNEX"
+        },
+        {
+          "code": "E5-03-28",
+          "name": "OFFICE"
+        },
+        {
+          "code": "E5-03-29",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-03-30",
+          "name": "RESEARCH COMPUTING LAB 2"
+        },
+        {
+          "code": "E5-03-31",
+          "name": "RESEARCH STAFF/ STUDENT ROOM"
+        },
+        {
+          "code": "E5-03-32",
+          "name": "INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-03-33",
+          "name": "CHEMICAL STORE CORRIDOR"
+        },
+        {
+          "code": "E5-03-33A",
+          "name": "CHEMICAL STORE 1"
+        },
+        {
+          "code": "E5-03-33B",
+          "name": "CHEMICAL STORE 2"
+        },
+        {
+          "code": "E5-03-33C",
+          "name": "CHEMICAL STORE 3"
+        },
+        {
+          "code": "E5-03-33D",
+          "name": "CHEMICAL STORE 4"
+        },
+        {
+          "code": "E5-03-35",
+          "name": "RESEARCH COMPUTATION LAB 4"
+        },
+        {
+          "code": "E5-03-36",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-03-37",
+          "name": "COMPUTER TEACHING LAB II"
+        },
+        {
+          "code": "E5-03-38",
+          "name": "INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-03-39",
+          "name": "RESEARCH COMPUTING LAB 5"
+        },
+        {
+          "code": "E5-03-40",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "E5-03-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-03-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-03-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "E5-03-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR3",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR4",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR5",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR6",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR7",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-CWPR8",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-03-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "E5-03-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-03-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-03-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-03-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-03-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-03-INTCOR",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-03-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "E5-03-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "E5-03-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "E5-03-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-03-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-03-SERV3",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-03-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-03-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-03-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-03-STORE",
+          "name": "STORE"
+        },
+        {
+          "code": "E5-03-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "E5-03-TELR2",
+          "name": "TELECOMM RISER"
+        }
+      ],
+      "04": [
+        {
+          "code": "E5-04-01",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-02",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-03",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-04",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-05",
+          "name": "RESEARCH LAB 3"
+        },
+        {
+          "code": "E5-04-06",
+          "name": "RESEARCH LAB 4"
+        },
+        {
+          "code": "E5-04-07",
+          "name": "RESEARCH LAB 5"
+        },
+        {
+          "code": "E5-04-08",
+          "name": "RESEARCH LAB 6"
+        },
+        {
+          "code": "E5-04-09",
+          "name": "COMMON FAC. ROOM 1"
+        },
+        {
+          "code": "E5-04-10",
+          "name": "COMMON FAC. ROOM 2"
+        },
+        {
+          "code": "E5-04-11",
+          "name": "RESEARCH LAB 7"
+        },
+        {
+          "code": "E5-04-11A",
+          "name": "FLAMMABLE GAS CABINET"
+        },
+        {
+          "code": "E5-04-12",
+          "name": "RESEARCH LAB 8"
+        },
+        {
+          "code": "E5-04-13",
+          "name": "RESEARCH STAFF/STUDENT ROOM 2"
+        },
+        {
+          "code": "E5-04-14",
+          "name": "RESEARCH STAFF/STUDENT ROOM 3"
+        },
+        {
+          "code": "E5-04-15",
+          "name": "RESEARCH STAFF/STUDENT ROOM 4"
+        },
+        {
+          "code": "E5-04-16",
+          "name": "RESEARCH LAB 9"
+        },
+        {
+          "code": "E5-04-17",
+          "name": "RESEARCH LAB 10"
+        },
+        {
+          "code": "E5-04-18",
+          "name": "RESEARCH LAB 11"
+        },
+        {
+          "code": "E5-04-19",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-20",
+          "name": "SPACE BANK (PRVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-21",
+          "name": "SPACE BANK (PREVIOUS FROM CBHE)"
+        },
+        {
+          "code": "E5-04-22",
+          "name": "SPACE BANK (PREVIOUS FROM CHBE)"
+        },
+        {
+          "code": "E5-04-23",
+          "name": "UTILITIES ROOM (SPACE BANK)"
+        },
+        {
+          "code": "E5-04-24",
+          "name": "INSTRUMENT ROOM 3"
+        },
+        {
+          "code": "E5-04-25",
+          "name": "RESEARCH LAB 14"
+        },
+        {
+          "code": "E5-04-26",
+          "name": "RESEARCH LAB 15 (VACANT)"
+        },
+        {
+          "code": "E5-04-27",
+          "name": "RESEARCH COMPUTING LAB 1"
+        },
+        {
+          "code": "E5-04-28",
+          "name": "RESEARCH COMPUTING LAB 2"
+        },
+        {
+          "code": "E5-04-29",
+          "name": "RESEARCH LAB 16"
+        },
+        {
+          "code": "E5-04-30",
+          "name": "RESEARCH LAB 17"
+        },
+        {
+          "code": "E5-04-31",
+          "name": "RESEARCH LAB 18"
+        },
+        {
+          "code": "E5-04-32",
+          "name": "RESEARCH STAFF/STUDENT ROOM 5"
+        },
+        {
+          "code": "E5-04-33",
+          "name": "EQUIPMENT ROOM"
+        },
+        {
+          "code": "E5-04-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-04-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "E5-04-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR3",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR4",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR5",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR6",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR7",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-CWPR8",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "E5-04-ELECT1",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "E5-04-ELECT2",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "E5-04-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-04-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "E5-04-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-04-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "E5-04-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "E5-04-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-04-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-04-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-04-HR4",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-04-INTCOR",
+          "name": "INTERNAL CIRCULATION"
+        },
+        {
+          "code": "E5-04-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "E5-04-SERV1",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-04-SERV2",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-04-SERV3",
+          "name": "SERVICE CORRIDOR"
+        },
+        {
+          "code": "E5-04-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-04-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-04-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-04-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "E5-04-TELR2",
+          "name": "TELECOMM RISER"
+        }
+      ],
+      "B1": [
+        {
+          "code": "E5-B1-01",
+          "name": "INSTRUMENT ROOM (AFM)"
+        },
+        {
+          "code": "E5-B1-01_TO_10",
+          "name": "INTERNAL CIRCULATION"
+        },
+        {
+          "code": "E5-B1-02",
+          "name": "RESEARCH INSTRUMENT LAB"
+        },
+        {
+          "code": "E5-B1-03",
+          "name": "RESEARCH COMPUTION LAB 3"
+        },
+        {
+          "code": "E5-B1-04",
+          "name": "RESEARCH COMPUTION LAB 4"
+        },
+        {
+          "code": "E5-B1-05",
+          "name": "RESEARCH STAFF/STUDENT ROOM"
+        },
+        {
+          "code": "E5-B1-06",
+          "name": "RESEARCH STAFF/STUDENT ROOM"
+        },
+        {
+          "code": "E5-B1-07",
+          "name": "RESEARCH LAB 1"
+        },
+        {
+          "code": "E5-B1-08",
+          "name": "RESEARCH LAB 2"
+        },
+        {
+          "code": "E5-B1-09",
+          "name": "INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-B1-09A",
+          "name": "INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-B1-10",
+          "name": "INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-B1-11",
+          "name": "RESEARCH LAB 3 / INSTRUMENT ROOM"
+        },
+        {
+          "code": "E5-B1-12",
+          "name": "RESEARCH LAB 5"
+        },
+        {
+          "code": "E5-B1-12A",
+          "name": "RESEARCH LAB"
+        },
+        {
+          "code": "E5-B1-13",
+          "name": "RESEARCH LAB 6"
+        },
+        {
+          "code": "E5-B1-14",
+          "name": "RESEARCH LAB 4"
+        },
+        {
+          "code": "E5-B1-18",
+          "name": "MATERIAL LAB 5 (FABRICATION & PROCESSING)"
+        },
+        {
+          "code": "E5-B1-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "E5-B1-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-B1-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "E5-B1-GASF",
+          "name": "FLAMMABLE GAS STORE"
+        },
+        {
+          "code": "E5-B1-HR",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "E5-B1-LIFT",
+          "name": "LIFT"
+        },
+        {
+          "code": "E5-B1-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "E5-B1-SERV",
+          "name": "SERVICE ACCESS TUNNEL"
+        },
+        {
+          "code": "E5-B1-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-B1-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-B1-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-B1-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-B1-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-B1-STORE1",
+          "name": "GAS CYLINDER ROOM"
+        },
+        {
+          "code": "E5-B1-STORE2",
+          "name": "AIR COMPRESSOR ROOM"
+        }
+      ],
+      "R1": [
+        {
+          "code": "E5-R1-LIFTM",
+          "name": "LIFT MOTOR ROOM"
+        },
+        {
+          "code": "E5-R1-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "E5-R1-STAIR2",
+          "name": "STAIRCASE"
+        }
+      ]
+    }
+  },
+  "HSS": {
+    "buildingName": "HON SUI SEN MEMORIAL LIBRARY",
+    "floors": {
+      "01": [
+        {
+          "code": "HSS-01-01",
+          "name": "QUIET ROOM (PRAYER) 1-1"
+        },
+        {
+          "code": "HSS-01-02",
+          "name": "RECORDING ROOM 1-2"
+        },
+        {
+          "code": "HSS-01-03",
+          "name": "QUIET ROOM (LACTATION) 1-3"
+        },
+        {
+          "code": "HSS-01-04",
+          "name": "QUIET STUDY ROOM"
+        },
+        {
+          "code": "HSS-01-05",
+          "name": "STAFF OFFICE"
+        },
+        {
+          "code": "HSS-01-06",
+          "name": "RESERVE BOOK STACK"
+        },
+        {
+          "code": "HSS-01-07",
+          "name": "QUIET STUDY ROOM"
+        },
+        {
+          "code": "HSS-01-08",
+          "name": "QUIET STUDY AREA"
+        },
+        {
+          "code": "HSS-01-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-01-BINCEN",
+          "name": "BIN HOLDING POINT"
+        },
+        {
+          "code": "HSS-01-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "HSS-01-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "HSS-01-EXTCOR1*",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-01-EXTCOR2*",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-01-EXTCOR3*",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-01-FCC",
+          "name": "FIRE COMMAND CENTRE"
+        },
+        {
+          "code": "HSS-01-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "HSS-01-FOYER*",
+          "name": "FOYER AREA"
+        },
+        {
+          "code": "HSS-01-GEN",
+          "name": "GENSET ROOM"
+        },
+        {
+          "code": "HSS-01-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "HSS-01-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-01-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-01-LIFTPIT1*",
+          "name": "LIFT PIT"
+        },
+        {
+          "code": "HSS-01-LIFTPIT2*",
+          "name": "LIFT PIT"
+        },
+        {
+          "code": "HSS-01-LOBBY*",
+          "name": "LOBBY AREA"
+        },
+        {
+          "code": "HSS-01-LS1*",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "HSS-01-LS2*",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "HSS-01-LS3*",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "HSS-01-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "HSS-01-RAMP1*",
+          "name": "RAMP"
+        },
+        {
+          "code": "HSS-01-RAMP2*",
+          "name": "RAMP"
+        },
+        {
+          "code": "HSS-01-RAMP3*",
+          "name": "RAMP"
+        },
+        {
+          "code": "HSS-01-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "HSS-01-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-01-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-01-STAIR3*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-01-STAIR4*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-01-STAIR5*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-01-SW",
+          "name": "SWITCH ROOM"
+        },
+        {
+          "code": "HSS-01-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "02": [
+        {
+          "code": "HSS-02-01",
+          "name": "LOUNGE AREA / BREAKOUT SPACE"
+        },
+        {
+          "code": "HSS-02-02",
+          "name": "SEMINAR ROOM 2-2"
+        },
+        {
+          "code": "HSS-02-02A",
+          "name": "AV ROOM"
+        },
+        {
+          "code": "HSS-02-02B",
+          "name": "TRANSLATOR ROOM"
+        },
+        {
+          "code": "HSS-02-03",
+          "name": "MULTI-PURPOSE ROOM 2-3"
+        },
+        {
+          "code": "HSS-02-04",
+          "name": "HON SUI SEN ROOM"
+        },
+        {
+          "code": "HSS-02-05",
+          "name": "HSS MULTI-PURPOSE TRAINING ROOM 2-5"
+        },
+        {
+          "code": "HSS-02-06",
+          "name": "HSS SEMINAR ROOM 2-6"
+        },
+        {
+          "code": "HSS-02-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-02-DB",
+          "name": "DISTRIBUTION BOARD"
+        },
+        {
+          "code": "HSS-02-DISCUSSION1*",
+          "name": "OPEN DISCUSSION AREA"
+        },
+        {
+          "code": "HSS-02-DISCUSSION2*",
+          "name": "DISCUSSION/ STUDY AREA"
+        },
+        {
+          "code": "HSS-02-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "HSS-02-EXTCOR*",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-02-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "HSS-02-FOYER*",
+          "name": "FOYER"
+        },
+        {
+          "code": "HSS-02-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-02-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-02-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-02-INTCOR1*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-02-INTCOR2*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-02-INTCOR3*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-02-INTCOR4*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-02-LIFTLOB*",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "HSS-02-LOBBY*",
+          "name": "ENTRANCE LOBBY"
+        },
+        {
+          "code": "HSS-02-LS*",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "HSS-02-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "HSS-02-PANTRY*",
+          "name": "PANTRY"
+        },
+        {
+          "code": "HSS-02-RAMP",
+          "name": "RAMP"
+        },
+        {
+          "code": "HSS-02-RAMP*",
+          "name": "RAMP"
+        },
+        {
+          "code": "HSS-02-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "HSS-02-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR4*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR5*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR6*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR7*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR8*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-STAIR9*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-02-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "03": [
+        {
+          "code": "HSS-03-01",
+          "name": "HSS SEMINAR ROOM 3-1"
+        },
+        {
+          "code": "HSS-03-01A",
+          "name": "AV ROOM"
+        },
+        {
+          "code": "HSS-03-01B",
+          "name": "TRANSLATOR ROOM"
+        },
+        {
+          "code": "HSS-03-02",
+          "name": "HSS SEMINAR ROOM 3-2"
+        },
+        {
+          "code": "HSS-03-03",
+          "name": "MBA LOUNGE"
+        },
+        {
+          "code": "HSS-03-03A",
+          "name": "MBA LOUNGE MEETING ROOM"
+        },
+        {
+          "code": "HSS-03-04",
+          "name": "HSS MULTI-PURPOSE ROOM 3-4"
+        },
+        {
+          "code": "HSS-03-05",
+          "name": "HSS SEMINAR ROOM 3-5"
+        },
+        {
+          "code": "HSS-03-06",
+          "name": "HSS MULTI-PURPOSE ROOM 3-6"
+        },
+        {
+          "code": "HSS-03-07",
+          "name": "AUDITORIUM"
+        },
+        {
+          "code": "HSS-03-07A",
+          "name": "PROJECTION ROOM"
+        },
+        {
+          "code": "HSS-03-ACCESS*",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "HSS-03-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-03-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-03-AVC",
+          "name": "MEDIA CONTROL ROOM"
+        },
+        {
+          "code": "HSS-03-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "HSS-03-DISCUSSION*",
+          "name": "DISCUSSION/ STUDY AREA"
+        },
+        {
+          "code": "HSS-03-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "HSS-03-EXTCOR1*",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-03-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "HSS-03-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "HSS-03-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-03-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-03-INTCOR1*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-03-INTCOR2*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-03-INTCOR3*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-03-INTCOR4*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-03-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "HSS-03-LS",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "HSS-03-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "HSS-03-PLANTER1",
+          "name": "PLANTER"
+        },
+        {
+          "code": "HSS-03-PLANTER2",
+          "name": "PLANTER"
+        },
+        {
+          "code": "HSS-03-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "HSS-03-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-03-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-03-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-03-STAIR4*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-03-STAIR5*",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-03-STORE*",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "HSS-03-STORE1",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "HSS-03-STORE2",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "HSS-03-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "04": [
+        {
+          "code": "HSS-04-01",
+          "name": "HSS SEMINAR ROOM 4-1"
+        },
+        {
+          "code": "HSS-04-02",
+          "name": "HSS SEMINAR ROOM 4-2"
+        },
+        {
+          "code": "HSS-04-02A",
+          "name": "AV ROOM"
+        },
+        {
+          "code": "HSS-04-02B",
+          "name": "TRANSLATOR ROOM"
+        },
+        {
+          "code": "HSS-04-03",
+          "name": "HSS SEMINAR ROOM 4-3"
+        },
+        {
+          "code": "HSS-04-04",
+          "name": "HSS MULTI-PURPOSE ROOM 4-4"
+        },
+        {
+          "code": "HSS-04-05",
+          "name": "HSS SEMINAR ROOM 4-5"
+        },
+        {
+          "code": "HSS-04-06",
+          "name": "MSC LOUNGE 4-6"
+        },
+        {
+          "code": "HSS-04-06A*",
+          "name": "UKNOWN"
+        },
+        {
+          "code": "HSS-04-06B*",
+          "name": "UKNOWN"
+        },
+        {
+          "code": "HSS-04-07",
+          "name": "HSS SEMINAR ROOM 4-7"
+        },
+        {
+          "code": "HSS-04-07A",
+          "name": "AV ROOM"
+        },
+        {
+          "code": "HSS-04-07B",
+          "name": "TRANSLATOR ROOM"
+        },
+        {
+          "code": "HSS-04-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-04-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "HSS-04-DISCUSSION1*",
+          "name": "DISCUSSION/ STUDY AREA"
+        },
+        {
+          "code": "HSS-04-DISCUSSION2*",
+          "name": "DISCUSSION/ STUDY AREA"
+        },
+        {
+          "code": "HSS-04-ELECT",
+          "name": "ELECTRICAL ROOM"
+        },
+        {
+          "code": "HSS-04-EXTCOR*",
+          "name": "LINK BRIDGE"
+        },
+        {
+          "code": "HSS-04-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "HSS-04-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "HSS-04-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-04-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "HSS-04-INTCOR*",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "HSS-04-JAN1",
+          "name": "JANITOR"
+        },
+        {
+          "code": "HSS-04-JAN2",
+          "name": "JANITOR"
+        },
+        {
+          "code": "HSS-04-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "HSS-04-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "HSS-04-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "HSS-04-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-04-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-04-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "HSS-04-STORE*",
+          "name": "FURNITURE STORE"
+        },
+        {
+          "code": "HSS-04-TASR",
+          "name": "TAS RISER"
+        }
+      ]
+    }
+  },
+  "IT": {
+    "buildingName": "NUS INFORMATION TECHNOLOGY",
+    "floors": {
+      "01": [
+        {
+          "code": "IT-01-01",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-01-01A",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-01-02",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-01-03",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-01-04",
+          "name": "SEMINAR ROOM (GLOBAL CLASSROOM)"
+        },
+        {
+          "code": "IT-01-05",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-01-06",
+          "name": "EQUIPMENT STORE"
+        },
+        {
+          "code": "IT-01-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "IT-01-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "IT-01-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "IT-01-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-01-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-01-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-01-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "IT-01-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-01-FCC",
+          "name": "FIRE COMMAND CENTRE"
+        },
+        {
+          "code": "IT-01-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "IT-01-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "IT-01-JAN1",
+          "name": "JANITOR CLOSET"
+        },
+        {
+          "code": "IT-01-JAN2",
+          "name": "JANITOR CLOSET"
+        },
+        {
+          "code": "IT-01-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "IT-01-LIFTPIT",
+          "name": "LIFT PIT"
+        },
+        {
+          "code": "IT-01-LOBBY",
+          "name": "LOBBY / EXTERNAL CORRIDOR 1"
+        },
+        {
+          "code": "IT-01-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "IT-01-OSS1",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "IT-01-SERV1",
+          "name": "VACANT"
+        },
+        {
+          "code": "IT-01-SERV2",
+          "name": "VACANT"
+        },
+        {
+          "code": "IT-01-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "IT-01-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "IT-01-TELR2",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "IT-01-TOILET",
+          "name": "UNISEX TOILET"
+        },
+        {
+          "code": "IT-01-UNKNOWN",
+          "name": "NO ACCESS"
+        }
+      ],
+      "02": [
+        {
+          "code": "IT-02-01",
+          "name": "LOCKER"
+        },
+        {
+          "code": "IT-02-02",
+          "name": "AUDITORIUM"
+        },
+        {
+          "code": "IT-02-03",
+          "name": "PROJECT OFFICE 1"
+        },
+        {
+          "code": "IT-02-03A",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-02-03B",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-02-03C",
+          "name": "SMART CARD ROOM"
+        },
+        {
+          "code": "IT-02-03D",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "IT-02-03E",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "IT-02-04",
+          "name": "CONFERENCE ROOM"
+        },
+        {
+          "code": "IT-02-05",
+          "name": "GENERAL OFFICE"
+        },
+        {
+          "code": "IT-02-05A",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-02-05B",
+          "name": "EQUIPMENT ROOM"
+        },
+        {
+          "code": "IT-02-05C",
+          "name": "HOTDESK ROOM"
+        },
+        {
+          "code": "IT-02-05D",
+          "name": "HOTDESK ROOM"
+        },
+        {
+          "code": "IT-02-06",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-02-AC",
+          "name": "UNKNOWN"
+        },
+        {
+          "code": "IT-02-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "IT-02-AVC",
+          "name": "CONTROL ROOM"
+        },
+        {
+          "code": "IT-02-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "IT-02-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "IT-02-DB",
+          "name": "DISTRIBUTION BOARD"
+        },
+        {
+          "code": "IT-02-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "IT-02-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-02-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-02-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-02-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "IT-02-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-02-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-02-EXTCOR3",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-02-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "IT-02-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "IT-02-HTSW",
+          "name": "HT SWITCH ROOM"
+        },
+        {
+          "code": "IT-02-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "IT-02-LTSW",
+          "name": "LT SWITCH ROOM"
+        },
+        {
+          "code": "IT-02-OSS",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "IT-02-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "IT-02-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "IT-02-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "IT-02-TRANSF",
+          "name": "TRANSFORMER ROOM"
+        },
+        {
+          "code": "IT-02-UNKNOWN",
+          "name": "NO ACCESS"
+        }
+      ],
+      "03": [
+        {
+          "code": "IT-03-01",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01A",
+          "name": "DIRECTOR'S OFFICE"
+        },
+        {
+          "code": "IT-03-01B",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01C",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01D",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01E",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01F",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-01G",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-02",
+          "name": "COLLABORATIVE ROOM"
+        },
+        {
+          "code": "IT-03-03",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-03-04",
+          "name": "SEMINAR ROOM (GLOBAL CLASSROOM)"
+        },
+        {
+          "code": "IT-03-05",
+          "name": "EDITING SUITE"
+        },
+        {
+          "code": "IT-03-06",
+          "name": "AV/VR LAB"
+        },
+        {
+          "code": "IT-03-07",
+          "name": "NUS IT OFFICE"
+        },
+        {
+          "code": "IT-03-07A",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-03-07B",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-03-07C",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "IT-03-07D",
+          "name": "UTILITY ROOM"
+        },
+        {
+          "code": "IT-03-07E",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-03-07F",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-03-07G",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-03-08",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-03-09",
+          "name": "EQUIPMENT ROOM"
+        },
+        {
+          "code": "IT-03-AVC",
+          "name": "AV CONTROL"
+        },
+        {
+          "code": "IT-03-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "IT-03-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "IT-03-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "IT-03-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-03-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-03-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-03-ELECTR4",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-03-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "IT-03-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-03-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-03-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "IT-03-MALE",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "IT-03-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "IT-03-TELR1",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "IT-03-UNKNOWN",
+          "name": "NO ACCESS"
+        }
+      ],
+      "04": [
+        {
+          "code": "IT-04-01",
+          "name": "CONFERENCE ROOM"
+        },
+        {
+          "code": "IT-04-02",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-04-03",
+          "name": "OFFICE"
+        },
+        {
+          "code": "IT-04-03A",
+          "name": "UTILITY ROOM"
+        },
+        {
+          "code": "IT-04-03B",
+          "name": "CITO OFFICE"
+        },
+        {
+          "code": "IT-04-03C",
+          "name": "FORENSIC ROOM"
+        },
+        {
+          "code": "IT-04-03D",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-04-03E",
+          "name": "COLLABORATION ROOM"
+        },
+        {
+          "code": "IT-04-03F",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-04-03G",
+          "name": "UTILITY ROOM"
+        },
+        {
+          "code": "IT-04-03H*",
+          "name": "STORE ROOM"
+        },
+        {
+          "code": "IT-04-03J",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-04-03K",
+          "name": "DIRECTOR'S OFFICE"
+        },
+        {
+          "code": "IT-04-03L",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-04-03M",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-04-03N",
+          "name": "NURSING ROOM"
+        },
+        {
+          "code": "IT-04-03P",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-04-03Q",
+          "name": "TELEPHONE BOOTH"
+        },
+        {
+          "code": "IT-04-03R",
+          "name": "STAFF LOUNGE"
+        },
+        {
+          "code": "IT-04-03S",
+          "name": "PANTRY"
+        },
+        {
+          "code": "IT-04-04",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-04-05",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "IT-04-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "IT-04-DR",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "IT-04-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "IT-04-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-04-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-04-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-04-ELECTR4",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "IT-04-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "IT-04-EXTCOR",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "IT-04-FEMALE",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "IT-04-HANDIC",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "IT-04-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "IT-04-HR2",
+          "name": "FIRE HOSEREEL"
+        },
+        {
+          "code": "IT-04-LIFTLOB",
+          "name": "LIFT LOBBY"
+        },
+        {
+          "code": "IT-04-MECHR1",
+          "name": "MECHANICAL RISER"
+        },
+        {
+          "code": "IT-04-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "IT-04-TELR",
+          "name": "TELECOMM RISER"
+        },
+        {
+          "code": "IT-04-UNKNOWN",
+          "name": "NO ACCESS"
+        }
+      ],
+      "LR": [
+        {
+          "code": "IT-LR-AHU",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "IT-LR-DWPUMP",
+          "name": "DOMESTIC WATER PUMP ROOM"
+        },
+        {
+          "code": "IT-LR-GEN",
+          "name": "GENSET ROOM"
+        },
+        {
+          "code": "IT-LR-LIFTM",
+          "name": "LIFT MOTOR ROOM"
+        },
+        {
+          "code": "IT-LR-LVSW",
+          "name": "SWTICH ROOM"
+        },
+        {
+          "code": "IT-LR-STAIR",
+          "name": "STAIRCASE"
+        }
+      ]
+    }
+  },
+  "MSL": {
+    "buildingName": "MEDICINE + SCIENCE LIBRARY (former FOD)",
+    "floors": {
+      "01": [
+        {
+          "code": "MSL-01-01",
+          "name": "ATRIUM"
+        },
+        {
+          "code": "MSL-01-02",
+          "name": "TRAINING ROOM 01"
+        },
+        {
+          "code": "MSL-01-03",
+          "name": "TRAINING ROOM 02"
+        },
+        {
+          "code": "MSL-01-04",
+          "name": "COLLABORATION SPACE 01"
+        },
+        {
+          "code": "MSL-01-05",
+          "name": "COLLABORATION SPACE 02"
+        },
+        {
+          "code": "MSL-01-06",
+          "name": "COLLABORATION SPACE 03"
+        },
+        {
+          "code": "MSL-01-07",
+          "name": "GOOD DAY CAFE"
+        },
+        {
+          "code": "MSL-01-08",
+          "name": "MAKER SPACE"
+        },
+        {
+          "code": "MSL-01-09",
+          "name": "GREEN ROOM"
+        },
+        {
+          "code": "MSL-01-10",
+          "name": "TECH-ENABLED ROOM"
+        },
+        {
+          "code": "MSL-01-11",
+          "name": "TRAINING ROOM 03"
+        },
+        {
+          "code": "MSL-01-12",
+          "name": "STORE"
+        },
+        {
+          "code": "MSL-01-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-01-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-01-BI1",
+          "name": "BREECHING INLET"
+        },
+        {
+          "code": "MSL-01-BI2",
+          "name": "BREECHING INLET"
+        },
+        {
+          "code": "MSL-01-BI3",
+          "name": "BREECHING INLET"
+        },
+        {
+          "code": "MSL-01-BI4",
+          "name": "BREECHING INLET"
+        },
+        {
+          "code": "MSL-01-BI5",
+          "name": "BREECHING INLET"
+        },
+        {
+          "code": "MSL-01-BINCEN",
+          "name": "BIN CENTRE"
+        },
+        {
+          "code": "MSL-01-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "MSL-01-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "MSL-01-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-01-DR1",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-01-DR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-DR3",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-01-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-01-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-01-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-01-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-01-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "MSL-01-ENT1*",
+          "name": "ENTRANCE"
+        },
+        {
+          "code": "MSL-01-ENT2*",
+          "name": "GALLERY ENTRANCE"
+        },
+        {
+          "code": "MSL-01-EXTCOR1",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-EXTCOR2",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-EXTCOR3",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-EXTCOR4",
+          "name": "EXTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-FCC",
+          "name": "FIRE COMMAND CENTRE"
+        },
+        {
+          "code": "MSL-01-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-01-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-01-GEN",
+          "name": "GENERATOR ROOM"
+        },
+        {
+          "code": "MSL-01-HANDIC1",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-01-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-HR4",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-HR5",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-01-HTSW",
+          "name": "HT SWITCH ROOM"
+        },
+        {
+          "code": "MSL-01-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-INTCOR3",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-INTCOR4",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-01-JAN",
+          "name": "JANITOR"
+        },
+        {
+          "code": "MSL-01-LOUNGE*",
+          "name": "STUDENT LOUNGE"
+        },
+        {
+          "code": "MSL-01-LS1",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "MSL-01-LS2",
+          "name": "LANDSCAPE"
+        },
+        {
+          "code": "MSL-01-LTSW",
+          "name": "LT SWITCH ROOM"
+        },
+        {
+          "code": "MSL-01-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-01-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-01-OSS",
+          "name": "OPEN SHELTERED SPACE"
+        },
+        {
+          "code": "MSL-01-SERVICE",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "MSL-01-SPARE",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-01-SPCV",
+          "name": "SPRINKLER CONTROL VALVE"
+        },
+        {
+          "code": "MSL-01-SPR",
+          "name": "SPRINKLER RISER"
+        },
+        {
+          "code": "MSL-01-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "MSL-01-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-01-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-01-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-01-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-01-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-01-TASR",
+          "name": "TAS RISER"
+        },
+        {
+          "code": "MSL-01-TRANSF",
+          "name": "TRANSFORMER ROOM"
+        },
+        {
+          "code": "MSL-LIFT-PL1",
+          "name": "LIFT PIT"
+        },
+        {
+          "code": "MSL-LIFT-SL1",
+          "name": "LIFT PIT"
+        }
+      ],
+      "02": [
+        {
+          "code": "MSL-02-01",
+          "name": "LIBRARY"
+        },
+        {
+          "code": "MSL-02-01A",
+          "name": "LIBRARY RECEPTION AREA"
+        },
+        {
+          "code": "MSL-02-01B",
+          "name": "CONSULTATION ROOM 1"
+        },
+        {
+          "code": "MSL-02-01C",
+          "name": "CONSULTATION ROOM 2"
+        },
+        {
+          "code": "MSL-02-02",
+          "name": "LIBRARY COLLECTION AREA"
+        },
+        {
+          "code": "MSL-02-02A",
+          "name": "PRINTING ROOM"
+        },
+        {
+          "code": "MSL-02-03",
+          "name": "RBR"
+        },
+        {
+          "code": "MSL-02-04",
+          "name": "STUDY AREA"
+        },
+        {
+          "code": "MSL-02-04A",
+          "name": "POST EDITING ROOM"
+        },
+        {
+          "code": "MSL-02-05",
+          "name": "RECORDING ROOM"
+        },
+        {
+          "code": "MSL-02-06",
+          "name": "STORE"
+        },
+        {
+          "code": "MSL-02-07",
+          "name": "LIBRARY OFFICE"
+        },
+        {
+          "code": "MSL-02-07A",
+          "name": "MEETING ROOM"
+        },
+        {
+          "code": "MSL-02-07B",
+          "name": "PANTRY"
+        },
+        {
+          "code": "MSL-02-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-02-AHU3",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-02-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "MSL-02-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-02-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-02-DR1",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-02-DR2",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-02-DR3",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-02-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-02-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-02-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-02-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-02-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "MSL-02-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-02-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-02-HANDIC1",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-02-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-02-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-02-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-02-HR4",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-02-HR5",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-02-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-02-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-02-INTCOR3",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-02-JAN",
+          "name": "JANITOR"
+        },
+        {
+          "code": "MSL-02-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-02-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-02-SERV",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "MSL-02-SPARE1",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-02-SPARE2",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-02-SPARE3",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-02-SPARE4",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-02-SPR",
+          "name": "SPRINKLER RISER"
+        },
+        {
+          "code": "MSL-02-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "MSL-02-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-02-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-02-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-02-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-02-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-02-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "03": [
+        {
+          "code": "MSL-03-01",
+          "name": "QUIET STUDY 01"
+        },
+        {
+          "code": "MSL-03-01A",
+          "name": "PRINTING ROOM"
+        },
+        {
+          "code": "MSL-03-02",
+          "name": "QUIET STUDY 02"
+        },
+        {
+          "code": "MSL-03-02A",
+          "name": "STUDENT DISCUSSION ROOM 01"
+        },
+        {
+          "code": "MSL-03-02B",
+          "name": "STUDENT DISCUSSION ROOM 02"
+        },
+        {
+          "code": "MSL-03-03",
+          "name": "QUIET STUDY 03"
+        },
+        {
+          "code": "MSL-03-04",
+          "name": "QUIET STUDY 04"
+        },
+        {
+          "code": "MSL-03-04A",
+          "name": "STUDENT DISCUSSION ROOM 03"
+        },
+        {
+          "code": "MSL-03-04B",
+          "name": "STUDENT DISCUSSION ROOM 04"
+        },
+        {
+          "code": "MSL-03-04C",
+          "name": "STUDENT DISCUSSION ROOM 05"
+        },
+        {
+          "code": "MSL-03-04D",
+          "name": "STUDENT DISCUSSION ROOM 06"
+        },
+        {
+          "code": "MSL-03-04E",
+          "name": "STUDENT DISCUSSION ROOM 07"
+        },
+        {
+          "code": "MSL-03-AHU1",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-03-AHU2",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-03-AHU3",
+          "name": "AHU ROOM"
+        },
+        {
+          "code": "MSL-03-CNT",
+          "name": "WIRE CENTRE"
+        },
+        {
+          "code": "MSL-03-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "MSL-03-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-03-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-03-CWPR3",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-03-DR1",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-03-DR2",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-03-DR3",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-03-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-03-ELECTR",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-03-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-03-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-03-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "MSL-03-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-03-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-03-HANDIC1",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-03-HANDIC2",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-03-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-03-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-03-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-03-HR4",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-03-HR5",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-03-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-03-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-03-INTCOR3",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-03-JAN",
+          "name": "JANITOR"
+        },
+        {
+          "code": "MSL-03-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-03-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-03-SERV",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "MSL-03-SPARE1",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-03-SPARE2",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-03-SPARE3",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-03-SPR",
+          "name": "SPRINKLER RISER"
+        },
+        {
+          "code": "MSL-03-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "MSL-03-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-03-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-03-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-03-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-03-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-03-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "04": [
+        {
+          "code": "MSL-04-01",
+          "name": "STUDY LOUNGE"
+        },
+        {
+          "code": "MSL-04-01A",
+          "name": "STUDENT DISCUSSION ROOM 01"
+        },
+        {
+          "code": "MSL-04-01B",
+          "name": "STUDENT DISCUSSION ROOM 02"
+        },
+        {
+          "code": "MSL-04-01C",
+          "name": "STUDENT DISCUSSION ROOM 03"
+        },
+        {
+          "code": "MSL-04-01D",
+          "name": "STUDENT DISCUSSION ROOM 04"
+        },
+        {
+          "code": "MSL-04-01E",
+          "name": "STUDENT DISCUSSION ROOM 05"
+        },
+        {
+          "code": "MSL-04-01F",
+          "name": "STUDENT DISCUSSION ROOM 06"
+        },
+        {
+          "code": "MSL-04-01G",
+          "name": "STUDENT DISCUSSION ROOM 07"
+        },
+        {
+          "code": "MSL-04-01H",
+          "name": "STUDENT DISCUSSION ROOM 08"
+        },
+        {
+          "code": "MSL-04-01J",
+          "name": "STUDENT DISCUSSION ROOM 09"
+        },
+        {
+          "code": "MSL-04-01K",
+          "name": "STUDENT DISCUSSION ROOM 10"
+        },
+        {
+          "code": "MSL-04-01L",
+          "name": "STUDENT DISCUSSION ROOM 11"
+        },
+        {
+          "code": "MSL-04-01M",
+          "name": "STUDENT DISCUSSION ROOM 12"
+        },
+        {
+          "code": "MSL-04-02",
+          "name": "SPACE BANK"
+        },
+        {
+          "code": "MSL-04-03",
+          "name": "SPACE BANK"
+        },
+        {
+          "code": "MSL-04-04",
+          "name": "SPACE BANK"
+        },
+        {
+          "code": "MSL-04-COMR",
+          "name": "COMPUTER RISER"
+        },
+        {
+          "code": "MSL-04-CWPR1",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-04-CWPR2",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-04-CWPR3",
+          "name": "CHILLED WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-04-DR1",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-04-DR2",
+          "name": "DRY RISER"
+        },
+        {
+          "code": "MSL-04-DWPR",
+          "name": "DOMESTIC WATER PIPE RISER"
+        },
+        {
+          "code": "MSL-04-ELECTR1",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-04-ELECTR2",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-04-ELECTR3",
+          "name": "ELECTRICAL RISER"
+        },
+        {
+          "code": "MSL-04-ELVR",
+          "name": "EXTRA LOW VOLTAGE RISER"
+        },
+        {
+          "code": "MSL-04-FEMALE1",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-04-FEMALE2",
+          "name": "FEMALE TOILET"
+        },
+        {
+          "code": "MSL-04-HANDIC1",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-04-HANDIC2",
+          "name": "HANDICAP TOILET"
+        },
+        {
+          "code": "MSL-04-HR1",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-04-HR2",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-04-HR3",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-04-HR4",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-04-HR5",
+          "name": "HOSEREEL"
+        },
+        {
+          "code": "MSL-04-INTCOR1",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-04-INTCOR2",
+          "name": "INTERNAL CORRIDOR"
+        },
+        {
+          "code": "MSL-04-JAN",
+          "name": "JANITOR"
+        },
+        {
+          "code": "MSL-04-MALE1",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-04-MALE2",
+          "name": "MALE TOILET"
+        },
+        {
+          "code": "MSL-04-SERV",
+          "name": "SERVICE ACCESS"
+        },
+        {
+          "code": "MSL-04-SPARE1",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-04-SPARE2",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-04-SPARE3",
+          "name": "VACANT"
+        },
+        {
+          "code": "MSL-04-SPR",
+          "name": "SPRINKLER RISER"
+        },
+        {
+          "code": "MSL-04-SSLOB",
+          "name": "SMOKE STOP LOBBY"
+        },
+        {
+          "code": "MSL-04-STAIR1",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-04-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-04-STAIR3",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-04-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-04-STAIR5",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-04-STEPS",
+          "name": "STEPS"
+        },
+        {
+          "code": "MSL-04-TASR",
+          "name": "TAS RISER"
+        }
+      ],
+      "R1": [
+        {
+          "code": "MSL-R1-STAIR2",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-R1-STAIR4",
+          "name": "STAIRCASE"
+        },
+        {
+          "code": "MSL-R1-STAIR5",
+          "name": "STAIRCASE"
+        }
+      ]
+    }
+  }
+}

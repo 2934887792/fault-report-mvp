@@ -7,7 +7,7 @@ export default function Home() {
       <View style={styles.header}>
         <Text style={styles.appName}>Fault Report Demo</Text>
         <Text style={styles.subtitle}>
-          Quickly capture facility issues in the E5 building.
+          Quickly capture facility issues with smart building, floor, and room selection.
         </Text>
       </View>
 
