@@ -37,7 +37,7 @@ export default function Home() {
           ]}
         >
           <Text style={styles.cardTitle}>I&apos;m not sure</Text>
-          <Text style={styles.cardTag}>AI assist (coming soon)</Text>
+          <Text style={styles.cardTag}>AI assist</Text>
           <Text style={styles.cardDescription}>
             Use AI assistance to locate and describe faults when you&apos;re
             unsure of the exact room.

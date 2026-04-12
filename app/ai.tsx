@@ -1,14 +1,10 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import { WebView } from "react-native-webview";
 
 export default function AI() {
   return (
-    <View style={{ flex: 1, padding: 16 }}>
-      <Text style={{ fontSize: 18, fontWeight: "700" }}>
-        AI Assist
-      </Text>
-      <Text style={{ marginTop: 8, opacity: 0.7 }}>
-        Coming soon
-      </Text>
+    <View style={{ flex: 1 }}>
+      <WebView source={{ uri: "https://upstage-zodiac-preflight.ngrok-free.dev" }} />
     </View>
   );
 }
