@@ -58,6 +58,8 @@ export default function Home() {
             Review, preview images, or delete reports stored on this device.
           </Text>
         </Pressable>
+
+
       </View>
     </View>
   );

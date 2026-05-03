@@ -32,6 +32,11 @@ type Room = {
   name: string;
 };
 
+const OTHER_ROOM_OPTION: Room = {
+  code: "OTHERS",
+  name: "Other location (e.g. corridor, toilet, stairwell, rooftop)",
+};
+
 type RoomsByBuilding = Record<
   string,
   {
@@ -510,7 +515,10 @@ export default function Manual() {
 
   const roomOptions = useMemo<Room[]>(() => {
     if (!selectedBuildingId || !floor) return [];
-    return roomsByBuilding[selectedBuildingId]?.floors?.[floor] ?? [];
+    return [
+      ...(roomsByBuilding[selectedBuildingId]?.floors?.[floor] ?? []),
+      OTHER_ROOM_OPTION,
+    ];
   }, [selectedBuildingId, floor]);
 
   const filteredRoomOptions = useMemo<Room[]>(() => {
@@ -524,6 +532,8 @@ export default function Manual() {
       );
     });
   }, [roomOptions, roomQuery]);
+
+  const isOtherRoomSelected = roomCode === OTHER_ROOM_OPTION.code;
 
   const filteredBuildingOptions = useMemo(() => {
     const query = buildingQuery.trim().toLowerCase();
@@ -787,6 +797,11 @@ export default function Manual() {
           ) : null}
 
           <Text style={styles.fieldLabel}>Description</Text>
+          {isOtherRoomSelected ? (
+            <Text style={styles.sectionHint}>
+              If you selected Others, please clearly describe the exact location here (for example: stairwell, rooftop, corridor near Room 203).
+            </Text>
+          ) : null}
           <TextInput
             value={description}
             onChangeText={setDescription}
